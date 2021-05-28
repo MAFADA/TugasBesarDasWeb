@@ -30,7 +30,6 @@ footer, header, hgroup, menu, nav, section {
 }
 body {
 	line-height: 1;
-    color: aliceblue;
 }
 ol, ul {
 	list-style: none;
@@ -69,3 +68,6 @@ h2{
     border-radius: 30px;
 }
 
+.container p{
+    color: aqua;
+}
