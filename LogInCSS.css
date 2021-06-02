@@ -1,3 +1,28 @@
-.container p{
-    margin-bottom: 5px;
+.container {
+    background-color: #eceef1;
+    width: 400px;
+    margin: 40px auto 10px auto;
+    padding: 30px;
+    padding-top: 10px;
+    border-radius: 6px;
+    text-align: center;
+}
+.a{
+    background-color: #dde3ec;
+    height: 30px;
+    color: #8290a3;
+    border: 1px solid #dde3ec;
+    display: block;
+    width: 100%;
+    font-size: 14px;
+    border-radius: 3px;
+}
+.tombol {
+    background-color: lightgreen;
+    height: 40px;
+    border: none;
+    display: block;
+    width: 100%;
+    font-size: 15px;
+    border-radius: 3px;
 }
