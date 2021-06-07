@@ -2,7 +2,7 @@
     // auto connect mysql dengan koneksi.php
     include "koneksiDB.php";
 
-    $username=$_POST['noInduk'];//mengambil data dari username
+    $username=$_POST['username'];//mengambil data dari username
     $password=md5($_POST['password']);//mengambil data dari password
 
     $query="SELECT * FROM anggota WHERE noInduk='$username' and password='$password';";
