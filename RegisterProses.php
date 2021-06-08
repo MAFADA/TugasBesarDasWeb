@@ -1,18 +1,22 @@
 <?php
     include "koneksi.php";
 
-    $noInduk=$_GET['noInduk'];
-    $nama=$_GET['Nama'];
+    $noInduk=$_GET['ni'];
+    $nama=$_GET['nama'];
+    $username=$_GET['username'];
     $nim=$_GET['nim'];
-    $jenisKelamin=$_GET['jenisKelamin'];
-    $alamat=$_GET['Alamat'];
+    $jenisKelamin=$_GET['jk'];
+    $alamat=$_GET['alamat'];
     $nohp=$_GET['noHp'];
-    $tglTerima=$_GET['tglTerima'];
+    $tglTerima=$_GET['date'];
+    $password=$_GET['password'];
 
-    $sql="INSERT INTO user() VALUES ();";
+    $sql="INSERT INTO user(noInduk,username,nama,nim,jenis_kelamin,noHp,tglTerima,password)
+     VALUES ('$noInduk','$nama','$username','$nim','$jenisKelamin'
+     ,'$alamat','$nohp','$tglTerima','$password');";
 
     if(mysqli_query($connect,$sql)) {
-        echo "Data berhasil ditambahkan";?>
+        echo "Register berhasil";?>
         <a href="LoginForm.html">Login Page</a>
     <?php    
     }else{
