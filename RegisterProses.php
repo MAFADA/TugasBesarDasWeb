@@ -11,7 +11,7 @@
     $tglTerima=$_GET['date'];
     $password=$_GET['password'];
 
-    $sql="INSERT INTO user(noInduk,username,nama,nim,jenis_kelamin,noHp,tglTerima,password)
+    $sql="INSERT INTO user(noInduk,username,nama,nim,jenis_kelamin,alamat,noHp,tglTerima,password)
      VALUES ('$noInduk','$nama','$username','$nim','$jenisKelamin'
      ,'$alamat','$nohp','$tglTerima',md5('$password'));";
 
