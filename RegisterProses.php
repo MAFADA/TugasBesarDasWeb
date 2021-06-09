@@ -1,5 +1,5 @@
 <?php
-    include "koneksi.php";
+    include "koneksiDB.php";
 
     $noInduk=$_GET['ni'];
     $nama=$_GET['nama'];
