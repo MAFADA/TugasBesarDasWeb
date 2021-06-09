@@ -1,29 +1,48 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <link rel="stylesheet" type="text/css" href="DefaultCSS.css">
-    <link rel="stylesheet" href="">
     <title>Sistem Informasi Perpustakaan </title>
+    <link rel="stylesheet" type="text/css" href="DefaultCSS.css">
+    <link rel="stylesheet" type="text/css" href="HalamanUtamaCSS.css">
+    <link rel="stylesheet" href="">
+    <script type="text/JavaScript" src="jquery-3.6.0.min.js"></script>
+    <script src="https:/kit.fontawesome.com/a076d05399.js"></script>
 </head>
 <body>
-    <div class="header">
+    <div class="atas">
 
     </div>
 
-    <div class="navbar">
-        <li>
-            <ul>Dashboard</ul>
-            <ul>Profil Perpustakaan</ul>
-            <ul>Katalog Buku</ul>
-            <ul>Peminjaman</ul>
-        </li>
+    <!-- <input type="checkbox" id="check">
+    <label for="check">
+      <i class="fas fa-bars" id="btn"></i>
+      <i class="fas fa-times" id="cancel"></i>
+    </label> -->
+    <div class="btn">
+        <span class="fas fa-bars"></span>
+    </div>
+    <nav class="kiri">
+        <div class="text">
+            <header>Menu</header>
+            <ul>
+                <li><a href="#"><i class="fas fa-home"></i> Dashboard</a></li>
+                <li><a href="#"><i class="fas fa-user"></i> Profil Perpustakaan</a></li>
+                <li><a href="#"><i class="fas fa-book"></i> Katalog Buku</a></li>
+                <li><a href="#"><i class="fas fa-pen"></i> Peminjaman</a></li>
+            </ul>
+        </div>
+    </nav>
+    <script>
+        $('.btn').click(function(){
+            $(this).toggleClass("click");
+            $('.kiri').toggleClass("show");
+        });
+    </script>
+
+    <div class="isi">
     </div>
 
-    <div class="container">//container==content/body
-
-    </div>
-
-    <div class="footer">
+    <div class="bawah">
 
     </div>
 </body>
