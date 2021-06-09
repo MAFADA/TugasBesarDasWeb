@@ -32,8 +32,8 @@
             <!-- <button type="submit" class="login" name="login" id="login" value="login"> LogIn
             <button type="submit" class="register" name="register" id="register" value="register">  <a href="RegisterForm.html">Register</a>  -->
             <input class="login" type="submit" value="Login"><br>
-            <!-- <a href="RegisterForm.html"><input class="register" type="button" value="Register"></a> -->
         </form>
+        <a href="RegisterForm.html"><input class="register" type="button" value="Register"></a>
         <br>
         
     </div>
