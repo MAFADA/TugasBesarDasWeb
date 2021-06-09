@@ -13,7 +13,7 @@
 
     $sql="INSERT INTO user(noInduk,username,nama,nim,jenis_kelamin,noHp,tglTerima,password)
      VALUES ('$noInduk','$nama','$username','$nim','$jenisKelamin'
-     ,'$alamat','$nohp','$tglTerima','$password');";
+     ,'$alamat','$nohp','$tglTerima',md5('$password'));";
 
     if(mysqli_query($connect,$sql)) {
         echo "Register berhasil";?>
