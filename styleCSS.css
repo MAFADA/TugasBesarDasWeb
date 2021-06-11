@@ -1,0 +1,150 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    font-family: 'Montserrat', sans-serif;
+    overflow-x: hidden;
+}
+
+/* Nav Bar */
+nav{
+    display: flex;
+    background-color: darkslategray;
+    justify-content: space-between;
+    padding: 0 30px;
+    height: 50px;
+    align-items: center;
+    color: white;
+}
+
+nav .logo{
+    font-family: 'Do Hyeon', sans-serif;
+    letter-spacing: 2px;
+    font-size: 20px;
+}
+
+nav ul{
+    display: flex;
+    list-style: none;
+    position: fixed;
+    left: 0;
+    top: 50px;
+    height: 100vh;
+    width: 200px;
+    line-height: 30px;
+    flex-direction: column;
+    background-color: rgb(62, 104, 104);
+    overflow-x: hidden;
+    align-items: center;
+}
+
+
+nav ul li a{
+    color: white;
+    text-decoration: none;
+    height: 30px;
+    display: block;
+}
+
+nav ul li{
+    display: block;
+    text-align: left;
+    width: 100%;
+    border-left: 3px solid transparent;
+}
+
+nav ul li:hover{
+    border-color: lightblue;
+    background-color: darkslategray;
+}
+
+nav ul li a:hover{
+    color: lightskyblue;
+}
+
+nav ul li a i{
+    font-size: 16px;
+    text-shadow: none;
+    width: 15px;
+    padding-left: 11px;
+    padding-right: 10px;
+}
+nav ul li a span{
+    font-size: 12px;
+}
+
+.menu{
+    display: block;
+    cursor: pointer;
+    opacity: 0.7;
+    width: 30px;
+    height: 27px;
+    margin-top: 10px;
+    margin-right: 11px;
+    margin-left: auto;
+    margin-bottom: 10px;
+    float: right;
+    background: url(menu.jpg);
+}
+
+nav ul.slide{
+    display: flex;
+    list-style: none;
+    position: absolute;
+    left: 0;
+    top: 50px;
+    height: 100vh;
+    width: 50px;
+    line-height: 30px;
+    flex-direction: column;
+    align-items: flex-start;
+    background-color: rgb(62, 104, 104);
+    overflow-x: hidden;
+}
+
+nav ul li a span.hidden{
+    display: none;
+}
+
+/* Login CSS */
+.container {
+    background-color: #eceef1;
+    width: 400px;
+    margin: 40px auto 10px auto;
+    padding: 30px;
+    padding-top: 10px;
+    border-radius: 6px;
+}
+.a{
+    background-color: #dde3ec;
+    height: 30px;
+    color: #8290a3;
+    border: none;
+    display: block;
+    width: 100%;
+    font-size: 14px;
+    border-radius: 3px;
+}
+.b{
+    color: gray;
+}
+.login {
+    background-color: lightblue;
+    height: 40px;
+    border: none;
+    display: block;
+    width: 100%;
+    font-size: 15px;
+    border-radius: 3px;
+}
+.register {
+    background-color: lightgreen;
+    height: 40px;
+    border: none;
+    display: block;
+    width: 100%;
+    font-size: 15px;
+    /* border-radius: 3px; */
+}
