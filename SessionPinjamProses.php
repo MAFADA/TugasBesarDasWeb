@@ -1,29 +1,21 @@
 <?php
-    include "koneksi.php";
     session_start();
-    $query="SELECT * FROM buku;";
-    $query1="SELECT * FROM peminjaman;";
-    $result1=mysqli_query($connect,$query);
-    $result=mysqli_query($connect,$query);
-    $row1=mysqli_fetch_array($result1);
-    $row=mysqli_fetch_array($result);
+    include "koneksiDB.php";
 
     $judul=$_GET['judul'];
-    $jmlh=$_GET['jml'];
-    $datePinjam=$_GET['datepinjam'];
-    $dateKembali=$_GET['datekembali'];
+    $jmlh=$_GET['jumlah'];
+    $datePinjam=$_GET['pinjam'];
+    $dateKembali=$_GET['kembali'];
 
-    // pake loop buat cari data yg cocok untuk 
-    // input ke database transaksi dan detail transaksi
+    $sql="SELECT * FROM buku WHERE judul='$judul';";
+    // $query=$connect->query($sql); //menjalankan kueri database
+    $result=mysqli_query($connect,$sql);
+    $row=mysqli_fetch_array($result);
+    $idBuku=$row['idBuku'];
 
-        if($row['judul']==$judul){
-            $peminjaman="INSERT INTO peminjaman(idAnggota,tglPinjam,tglKembali)
-            VALUES('$row1['idAnggota']','$datePinjam','$dateKembali');";
-            
-            $detail_pinjam="INSERT INTO detail_pinjam(idPeminjaman,idBuku,jml) 
-            VALUES('$id_pinjam','$row['idBuku']',$jmlh);";
-        }else{
-            $_SESSION['error']='Data Buku yang anda masukkan tidak ditemukan';
-            echo mysqli_error($connect);
-        }
+    $peminjaman=$connect->query("INSERT INTO peminjaman(tglPinjam,tglKembali)
+                VALUES('$datePinjam','$dateKembali')");
+    $detail_pinjam=$connect->query("INSERT INTO detail_pinjam(idBuku,jml) 
+                     VALUES($idBuku',$jmlh)");
+
 ?>
