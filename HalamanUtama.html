@@ -3,47 +3,26 @@
 <head>
     <title>Sistem Informasi Perpustakaan </title>
     <link rel="stylesheet" type="text/css" href="DefaultCSS.css">
-    <link rel="stylesheet" type="text/css" href="HalamanUtamaCSS.css">
-    <link rel="stylesheet" href="">
+    <link rel="stylesheet" type="text/css" href="styleCSS.css">
     <script type="text/JavaScript" src="jquery-3.6.0.min.js"></script>
     <script src="https:/kit.fontawesome.com/a076d05399.js"></script>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Do+Hyeon&family=Montserrat&display=swap" rel="stylesheet"> 
 </head>
 <body>
-    <div class="atas">
-
-    </div>
-
-    <!-- <input type="checkbox" id="check">
-    <label for="check">
-      <i class="fas fa-bars" id="btn"></i>
-      <i class="fas fa-times" id="cancel"></i>
-    </label> -->
-    <div class="btn">
-        <span class="fas fa-bars"></span>
-    </div>
-    <nav class="kiri">
-        <div class="text">
-            <header>Menu</header>
-            <ul>
-                <li><a href="#"><i class="fas fa-home"></i> Dashboard</a></li>
-                <li><a href="#"><i class="fas fa-user"></i> Profil Perpustakaan</a></li>
-                <li><a href="#"><i class="fas fa-book"></i> Katalog Buku</a></li>
-                <li><a href="#"><i class="fas fa-pen"></i> Peminjaman</a></li>
-            </ul>
+    <nav>
+        <div class="logo">
+            <h4>Perpustakaan</h4>
         </div>
+
+        <ul>
+            <div class="menu"></div>
+            <li><a href="#"><i class="fas fa-home"></i><span>Dashboard</span></a></li>
+            <li><a href="#"><i class="fas fa-user"></i><span>Profil Perpustakaan</span></a></li>
+            <li><a href="#"><i class="fas fa-book"></i><span>Katalog Buku</span></a></li>
+            <li><a href="#"><i class="fas fa-pen"></i><span>Peminjaman</span></a></li>
+        </ul>
     </nav>
-    <script>
-        $('.btn').click(function(){
-            $(this).toggleClass("click");
-            $('.kiri').toggleClass("show");
-        });
-    </script>
-
-    <div class="isi">
-    </div>
-
-    <div class="bawah">
-
-    </div>
+    <script src="script.js"></script>
 </body>
 </html>
