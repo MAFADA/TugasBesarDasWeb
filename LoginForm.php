@@ -30,24 +30,9 @@
 
 <!-- akhir side bar -->
 
-    <?php
-        session_start();
-        //muncul pesan error
-        // if(isset($_SESSION['error'])){
-    ?>
-
-    <!-- <div class="alert" role="alert">
-        <center>?=$_SESSION['error']?></center>
-        <button type="button" class="close" data-dismiss="alert" aria-label="Close">
-<span aria-hidden="true">×</span>
-    </button>
-    </div> -->
     <h2>LogIn</h2>
     </div>
 
-    <?php
-  }
-  ?>
     <div class="container">
         <form action="SessionLoginMultiProses.php" method="POST">
             <!--        <div class='form-group'>
