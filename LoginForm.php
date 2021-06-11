@@ -2,10 +2,33 @@
 <html lang="en">
 <head>
     <link rel="stylesheet" type="text/css" href="DefaultCSS.css">
-    <link rel="stylesheet" href="LogInCSS.css">
+    <link rel="stylesheet" type="text/css" href="styleCSS.css">
+    <script type="text/JavaScript" src="jquery-3.6.0.min.js"></script>
+    <script src="https:/kit.fontawesome.com/a076d05399.js"></script>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Do+Hyeon&family=Montserrat&display=swap" rel="stylesheet"> 
     <title>Login Page</title>
 </head>
 <body>
+
+<!-- Side bar -->
+
+<nav>
+        <div class="logo">
+            <h4>Perpustakaan</h4>
+        </div>
+
+        <ul>
+            <div class="menu"></div>
+            <li><a href="#"><i class="fas fa-home"></i><span>Dashboard</span></a></li>
+            <li><a href="#"><i class="fas fa-user"></i><span>Profil Perpustakaan</span></a></li>
+            <li><a href="#"><i class="fas fa-book"></i><span>Katalog Buku</span></a></li>
+            <li><a href="#"><i class="fas fa-pen"></i><span>Peminjaman</span></a></li>
+        </ul>
+    </nav>
+    <script src="script.js"></script>
+
+<!-- akhir side bar -->
 
     <?php
         session_start();
@@ -23,8 +46,6 @@
     <?php
   }
   ?>
-
-    <h2>LogIn</h2>
     <div class="container">
         <form action="SessionLoginMultiProses.php" method="POST">
             <input type="text" class="a" name="ni" id="ni" placeholder="Nomor Induk/Username"><br>
