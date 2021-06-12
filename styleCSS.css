@@ -10,6 +10,8 @@ body{
 
 /* Nav Bar */
 nav{
+    position: fixed;
+    width: 100%;
     display: flex;
     background-color: darkslategray;
     justify-content: space-between;
