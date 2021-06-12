@@ -25,10 +25,29 @@
     <script src="script.js"></script>
     
     <div class="container">
-        <form action="RegisterProses.php" method="GET">
-           
-        </form>
-        
+        <div class="list-table">
+            <table>
+                <tr>
+                    <th>No</th>
+                    <th>No.Induk</th>
+                    <th>Nama Lengkap</th>                    
+                    <th>Alamat</th>
+                    <th>No HP</th>
+                    <th>Tanggal Diterima</th>
+                </tr>
+            </table>
+            <?php
+                include "koneksiDB.php";
+
+                $query="SELECT id_user,noInduk,nama,alamat,noHp,tglTerima 
+                FROM user";
+                $result = mysqli_query($connect,$query);
+
+                if (mysqli_num_rows) {
+                    # code...
+                }
+            ?>
+        </div>
     </div>
 </body>
 </html>
