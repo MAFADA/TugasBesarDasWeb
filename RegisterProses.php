@@ -12,12 +12,12 @@
     $password=$_GET['password'];
 
     $sql="INSERT INTO user(noInduk,username,nama,nim,jenis_kelamin,alamat,noHp,tglTerima,password)
-     VALUES ('$noInduk','$nama','$username','$nim','$jenisKelamin'
+     VALUES ('$noInduk','$username','$nama','$nim','$jenisKelamin'
      ,'$alamat','$nohp','$tglTerima',md5('$password'));";
 
     if(mysqli_query($connect,$sql)) {
         echo "Register berhasil";?>
-        <a href="LoginForm.html">Login Page</a>
+        <a href="LoginForm.php">Login Page</a>
     <?php    
     }else{
         echo "Data gagal ditambahkan <br>".mysqli_error($connect);
