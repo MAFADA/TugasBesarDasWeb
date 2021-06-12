@@ -9,22 +9,31 @@ body{
 }
 
 /* Nav Bar */
-nav{
-    position: fixed;
-    width: 100%;
-    display: flex;
-    background-color: darkslategray;
-    justify-content: space-between;
-    padding: 0 30px;
-    height: 50px;
-    align-items: center;
-    color: white;
-}
+/* nav{ */
+    /* position: fixed; */
+    /* width: 100%; */
+    /* display: flex; */
+    /* background-color: darkslategray; */
+    /* justify-content: space-between; */
+    /* padding: 0 30px; */
+    /* height: 55px; */
+    /* align-items: center; */
+    /* color: white; */
+/* } */
 
-nav .logo{
+#logo{
+    top: 0;
+    padding: 0 30px;
+    position: fixed;
+    display: flex;
+    align-items: center;
+    width: 100vmax;
+    background-color: darkslategray;
+    height: 55px;
     font-family: 'Do Hyeon', sans-serif;
     letter-spacing: 2px;
     font-size: 20px;
+    color: white;
 }
 
 nav ul{
@@ -32,16 +41,15 @@ nav ul{
     list-style: none;
     position: fixed;
     left: 0;
-    top: 50px;
-    height: 100vh;
-    width: 200px;
+    top: 55px;
+    height: 100%;
+    width: 50px;
     line-height: 30px;
     flex-direction: column;
+    align-items: flex-start;
     background-color: rgb(62, 104, 104);
     overflow-x: hidden;
-    align-items: center;
 }
-
 
 nav ul li a{
     color: white;
@@ -74,7 +82,7 @@ nav ul li a i{
     padding-right: 10px;
 }
 nav ul li a span{
-    font-size: 12px;
+    display: none;
 }
 
 .menu{
@@ -94,31 +102,43 @@ nav ul li a span{
 nav ul.slide{
     display: flex;
     list-style: none;
-    position: absolute;
+    position: fixed;
     left: 0;
-    top: 50px;
+    top: 55px;
     height: 100vh;
-    width: 50px;
+    width: 200px;
     line-height: 30px;
     flex-direction: column;
     align-items: flex-start;
     background-color: rgb(62, 104, 104);
     overflow-x: hidden;
+    align-items: center;
 }
 
 nav ul li a span.hidden{
-    display: none;
+    display: inline;
+    font-size: 12px;
+}
+
+div.off{
+    background-color: #eceef1;
+    margin: 65px 10px 10px 60px;
+}
+
+div.on{
+    margin-left: 210px;
 }
 
 /* Login CSS */
 .container {
     background-color: #eceef1;
-    width: 400px;
-    margin: 40px auto 10px auto;
-    padding: 30px;
-    padding-top: 10px;
+    width: 800px;
+    height: auto;
+    margin: 80px auto 10px auto;
+    padding: 10px 40px 30px 40px;
     border-radius: 6px;
 }
+
 .a{
     background-color: #dde3ec;
     height: 30px;
@@ -140,6 +160,7 @@ nav ul li a span.hidden{
     width: 100%;
     font-size: 15px;
     border-radius: 3px;
+    text-decoration: none;
 }
 .register {
     background-color: lightgreen;
@@ -148,5 +169,19 @@ nav ul li a span.hidden{
     display: block;
     width: 100%;
     font-size: 15px;
-    /* border-radius: 3px; */
+    border-radius: 3px;
+    text-decoration: none;
+}
+label{
+    color: rgb(95, 95, 95);
+}
+.form-control{
+    background-color: #dde3ec;
+    height: 30px;
+    color: #8290a3;
+    border: none;
+    display: block;
+    width: 100%;
+    font-size: 14px;
+    border-radius: 3px;
 }
