@@ -43,7 +43,7 @@
                 FROM user";
                 $result = mysqli_query($connect,$query);
 
-                if (mysqli_num_rows) {
+                if (mysqli_num_rows($result)) {
                     # code...
                 }
             ?>
