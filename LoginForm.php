@@ -13,11 +13,11 @@
 
 <!-- Side bar -->
 
-<nav>
-        <div class="logo">
-            <h4>Perpustakaan</h4>
-        </div>
-
+<div id="logo">
+        <h4>Perpustakaan</h4>
+    </div>
+    <nav>
+        
         <ul>
             <div class="menu"></div>
             <li><a href="#"><i class="fas fa-home"></i><span>Dashboard</span></a></li>
@@ -25,12 +25,13 @@
             <li><a href="#"><i class="fas fa-book"></i><span>Katalog Buku</span></a></li>
             <li><a href="#"><i class="fas fa-pen"></i><span>Peminjaman</span></a></li>
         </ul>
-</nav>
+    </nav>
     <script src="script.js"></script>
 
 <!-- akhir side bar -->
 
     <div class="container">
+        <br>
         <form action="SessionLoginMultiProses.php" method="POST">
             <!--        <div class='form-group'>
                 <label for="username">Username</label>
@@ -45,11 +46,11 @@
             <input type="text" class="a" name="ni" id="ni" placeholder="Nomor Induk/Username"><br>
             <input type="password" class="a" name="password" id="password" placeholder="Password"><br>
             <label for="Level">Level</label>
-            <select name="level" class='form-control' id='level'>
+            <select class="a" name="level" class='form-control' id='level'>
                 <option value="">-- Masuk Sebagai --</option>
                 <option value="2">Operator</option>
                 <option value="1">Admin</option>
-            </select>
+            </select><br>
             <!-- <button type="submit" class="login" name="login" id="login" value="login"> LogIn
             <button type="submit" class="register" name="register" id="register" value="register">  <a href="RegisterForm.html">Register</a>  -->
             <input class="login" type="submit" value="Login"><br>

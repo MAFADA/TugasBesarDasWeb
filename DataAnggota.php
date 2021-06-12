@@ -6,14 +6,13 @@
     <script src="https:/kit.fontawesome.com/a076d05399.js"></script>
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Do+Hyeon&family=Montserrat&display=swap" rel="stylesheet"> 
-    <title>Document</title>
+    <title>Data Anggota</title>
 </head>
 <body>
+    <div id="logo">
+        <h4>Perpustakaan</h4>
+    </div>
     <nav>
-        <div class="logo">
-            <h4>Perpustakaan</h4>
-        </div>
-
         <ul>
             <div class="menu"></div>
             <li><a href="#"><i class="fas fa-home"></i><span>Dashboard</span></a></li>
@@ -25,6 +24,7 @@
     <script src="script.js"></script>
     
     <div class="container">
+        <br>
         <div class="list-table">
             <table>
                 <tr>
@@ -48,8 +48,6 @@
                 }
             ?>
         </div>
-        
-        
     </div>
 </body>
 </html>
