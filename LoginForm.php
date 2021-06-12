@@ -25,13 +25,10 @@
             <li><a href="#"><i class="fas fa-book"></i><span>Katalog Buku</span></a></li>
             <li><a href="#"><i class="fas fa-pen"></i><span>Peminjaman</span></a></li>
         </ul>
-    </nav>
+</nav>
     <script src="script.js"></script>
 
 <!-- akhir side bar -->
-
-    <h2>LogIn</h2>
-    </div>
 
     <div class="container">
         <form action="SessionLoginMultiProses.php" method="POST">
