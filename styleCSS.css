@@ -131,7 +131,7 @@ div.on{
 
 /* Login CSS */
 .container {
-    background-color: #eceef1;
+    background-color: rgb(67, 114, 114);
     width: 800px;
     height: auto;
     margin: 80px auto 10px auto;
@@ -142,7 +142,7 @@ div.on{
 .a{
     background-color: #dde3ec;
     height: 30px;
-    color: #8290a3;
+    color: black;
     border: none;
     display: block;
     width: 100%;
@@ -150,27 +150,22 @@ div.on{
     border-radius: 3px;
 }
 .b{
-    color: gray;
+    color: whitesmoke;
+}
+.login, .register{
+    height: 40px;
+    border: none;
+    display: block;
+    width: 100%;
+    font-size: 15px;
+    border-radius: 3px;
+    text-decoration: none;
 }
 .login {
-    background-color: lightblue;
-    height: 40px;
-    border: none;
-    display: block;
-    width: 100%;
-    font-size: 15px;
-    border-radius: 3px;
-    text-decoration: none;
+    background-color: rgb(0, 191, 255);
 }
 .register {
-    background-color: lightgreen;
-    height: 40px;
-    border: none;
-    display: block;
-    width: 100%;
-    font-size: 15px;
-    border-radius: 3px;
-    text-decoration: none;
+    background-color: #00d600;
 }
 label{
     color: rgb(95, 95, 95);
@@ -184,4 +179,71 @@ label{
     width: 100%;
     font-size: 14px;
     border-radius: 3px;
+}
+
+.table1 {
+    font-family: sans-serif;
+    color: white;
+    border-collapse: collapse;
+    width: 100%;
+    border: 1px solid rgb(67, 114, 114);
+}
+ 
+.table1 tr th{
+    background: #35A9DB;
+    /* color: #fff; */
+    font-weight: normal;
+}
+ 
+.table1, th, td {
+    padding: 8px 20px;
+    text-align: center;
+    vertical-align: middle;
+}
+ 
+.table1 tr:nth-child(even) {
+    background-color: #f2f2f2;
+    color: black;
+}
+
+.table2 {
+    font-family: sans-serif;
+    color: white;
+    border-collapse: collapse;
+    width: 100%;
+}
+ 
+.table2 tr th{
+    font-weight: normal;
+    text-align: center;
+}
+
+.kolom1{
+    width: 150px;
+}
+
+.table2, th, td {
+    padding: 8px 20px;
+    text-align: left;
+    vertical-align: middle;
+}
+
+.edit, .hapus{
+    margin: 3px;
+    display: block;
+    height: 20px;
+    width: 60px;
+    text-align: center;
+    border-radius: 3px;
+    color: whitesmoke;
+    text-decoration: none;
+}
+.edit{
+    background-color: #00a400;
+}
+.hapus{
+    background-color: red;
+}
+a{
+    text-decoration: none;
 }

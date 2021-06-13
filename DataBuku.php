@@ -26,18 +26,16 @@
     <div class="container">
         <br>
         <div class="list-table">
-            <table>
-            <thead>
+            <table class="table1">
                 <tr>
-                    <td>No</td>
-                    <td>Kode Buku</td>
-                    <td>Judul</td>                    
-                    <td>Pengarang</td>
-                    <td>Penerbit</td>
-                    <td>Tahun Terbit</td>
+                    <th>No</th>
+                    <th>Kode Buku</th>
+                    <th>Judul</th>                    
+                    <th>Pengarang</th>
+                    <th>Penerbit</th>
+                    <th>Tahun Terbit</th>
+                    <th></th>
                 </tr>
-            </thead>
-            <tbody>
                 <?php
                     include "koneksiDB.php";
 
@@ -48,7 +46,7 @@
                 if (mysqli_num_rows($query)) {         
                     while ($row=mysqli_fetch_array($query)) {                                            
                 ?>
-                        <tr>
+                        <tr class="tb">
                             <td><?php echo $row['idBuku']?></td>
                             <td><?php echo $row['kode_buku']?></td>
                             <td><?php echo $row['judul']?></td>
@@ -56,15 +54,14 @@
                             <td><?php echo $row['Penerbit']?></td>
                             <td><?php echo $row['tahun_terbit']?></td>                        
                             <td>
-                                <a href="editBukuFormAdmin.php?id=<?php echo $row['idBuku'];?>">Edit &nbsp;</a>
-                                <a href="hapusBuku.php?id=<?php echo $row['idBuku'];?>">Hapus</a>
+                                <a class="edit" href="editBukuFormAdmin.php?id=<?php echo $row['idBuku'];?>">Edit</a>
+                                <a class="hapus" href="hapusBuku.php?id=<?php echo $row['idBuku'];?>">Hapus</a>
                             </td>
                         </tr>
                 <?php
                     }
                 }                 
                 ?>
-            </tbody>
             </table>           
         </div>
     </div>

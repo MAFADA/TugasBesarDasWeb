@@ -26,19 +26,17 @@
     <div class="container">
         <br>
         <div class="list-table">
-            <table>
-            <thead>
+            <table class="table1">
                 <tr>
-                    <td>No</td>
-                    <td>Nama</td>
-                    <td>Tanggal Pinjam</td>                    
-                    <td>Tanggal Kembali</td>
-                    <td>Judul</td>
-                    <td>Jumlah</td>
-                    <td>Status</td>
+                    <th>No</th>
+                    <th>Nama</th>
+                    <th>Tanggal Pinjam</th>                    
+                    <th>Tanggal Kembali</th>
+                    <th>Judul</th>
+                    <th>Jumlah</th>
+                    <th>Status</th>
+                    <th></th>
                 </tr>
-            </thead>
-            <tbody>
                 <?php
                     include "koneksiDB.php";
                     
@@ -51,7 +49,7 @@
                 if (mysqli_num_rows($query)) {            
                     while ($row=mysqli_fetch_array($query)) {                                            
                 ?>
-                        <tr>
+                        <tr class="tb">
                             <td><?php echo $row['idDetail']?></td>
                             <td><?php echo $row['nama']?></td>
                             <td><?php echo $row['tglPinjam']?></td>
@@ -60,15 +58,14 @@
                             <td><?php echo $row['jml']?></td>
                             <td><?php echo $row['status']?></td>
                             <td>
-                                <a href="editTransaksiFormAdmin.php?id=<?php echo $row['idDetail'];?>">Edit &nbsp;</a>
-                                <a href="hapusTransaksi.php?id=<?php echo $row['idDetail'];?>">Hapus</a>
+                                <a class="edit" href="editTransaksiFormAdmin.php?id=<?php echo $row['idDetail'];?>">Edit</a>
+                                <a class="hapus" href="hapusTransaksi.php?id=<?php echo $row['idDetail'];?>">Hapus</a>
                             </td>
                         </tr>
                 <?php
                     }                
                 }                    
                 ?>
-            </tbody>
             </table>           
         </div>
     </div>
