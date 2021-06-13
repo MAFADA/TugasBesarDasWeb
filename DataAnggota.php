@@ -26,18 +26,19 @@
     <div class="container">
         <br>
         <div class="list-table">
-            <table>
-                <thead>
+            <table class="table1">
+                <!-- <thead> -->
                     <tr>
-                        <td>No</td>
-                        <td>No.Induk</td>
-                        <td>Nama Lengkap</td>                    
-                        <td>Alamat</td>
-                        <td>No HP</td>
-                        <td>Tanggal Diterima</td>
+                        <th>No</th>
+                        <th>No.Induk</th>
+                        <th>Nama Lengkap</th>                    
+                        <th>Alamat</th>
+                        <th>No HP</th>
+                        <th>Tanggal Diterima</th>
+                        <th></th>
                     </tr>            
-                </thead>
-                <tbody>
+                <!-- </thead> -->
+                <!-- <tbody> -->
                         <?php
                         include "koneksiDB.php";
 
@@ -48,7 +49,7 @@
                         if (mysqli_num_rows($result)) {
                             while ($row=mysqli_fetch_array($result)) {                                            
                         ?>
-                        <tr>
+                        <tr class="tb">
                             <td><?php echo $row['id_user']?></td>
                             <td><?php echo $row['noInduk']?></td>
                             <td><?php echo $row['nama']?></td>                            
@@ -56,15 +57,15 @@
                             <td><?php echo $row['noHp']?></td>
                             <td><?php echo $row['tglTerima']?></td>                
                             <td>
-                                <a href="editDataAnggota.php?id=<?php echo $row['id_user'];?>">Edit &nbsp;</a>
-                                <a href="hapusAnggota.php?id=<?php echo $row['id_user'];?>">Hapus</a>
+                                <a class="edit" href="editDataAnggota.php?id=<?php echo $row['id_user'];?>">Edit</a>
+                                <a class="hapus" href="hapusAnggota.php?id=<?php echo $row['id_user'];?>">Hapus</a>
                             </td>
                         </tr>
                         <?php
                             }
                         }
                         ?>
-                </tbody>
+                <!-- </tbody> -->
             
             </table>
         </div>

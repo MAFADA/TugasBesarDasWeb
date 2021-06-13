@@ -10,26 +10,41 @@
             $result=mysqli_query($connect,$query);
         
         ?>
-        <table>
-            <form action="prosesEditTrAdmin.php" method="get">
-                <?php
-                    while ($row=mysqli_fetch_array($result)) {                                            
-                ?>
-                <tr>
-                    <td>Id</td>
-                    <td><input type="number" name='id' value="<?php echo $row['idDetail'];?>" readonly></td>
-                </tr>
-                <tr>
-                   <td>Status</td>
-                   <td><input type="text" name="status" value="<?php echo $row['status'];?>"></td>
-                </tr>
-                <tr>
-                    <input type="submit" name="edit" value='Edit'>
-                </tr>                
-                <?php
-                    }
-                ?>
-            </form>
-        </table>
+        <div class="container">
+            <table class="table2">
+                <form action="prosesEditTrAdmin.php" method="get">
+                    <?php
+                        while ($row=mysqli_fetch_array($result)) {                                            
+                    ?>
+                    <thead>
+                        <tr>
+                            <th colspan="2">
+                                PERUBAHAN DATA TRANSAKSI
+                            </th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td class="kolom1">Id</td>
+                            <td><input type="number" name='id' value="<?php echo $row['idDetail'];?>" readonly></td>
+                        </tr>
+                        <tr>
+                           <td>Status</td>
+                           <td><input type="text" name="status" value="<?php echo $row['status'];?>"></td>
+                        </tr>
+                    </tbody>
+                    <tfoot>
+                        <tr>
+                            <th colspan="2">
+                                <input class="register" type="submit" name="edit" value='Edit'>
+                            </th>
+                        </tr>                
+                    </tfoot>
+                    <?php
+                        }
+                    ?>
+                </form>
+            </table>
+        </div>
     </body>
 </html>
