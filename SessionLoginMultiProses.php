@@ -11,16 +11,18 @@
         header('Location: LoginForm.php');
     }
 
-    $sql="SELECT * FROM anggota WHERE username='$username' AND password='$password' AND id_level='$level'";
-    $query=$connect->query($sql);
+    $query=mysqli_query($connect,"SELECT * FROM user WHERE username='$username' AND password='$password' AND id_level='$level'");
+    $cek=mysqli_num_rows($query);
+   
+    // $query=$connect->query($sql);
     
     // var_dump($result);
     // $result=mysqli_query($connect,$query);//dapat digunakan untuk melakukan kueri terhadap database.
     // $cek=mysqli_fetch_assoc($result);
 
-    if($query->num_rows>0){ 
-        while ($result=$query->fetch_assoc()) {
-            $_SESSION['ni']=$result['username'];
+    if($cek>0){ 
+        while ($row=mysqli_fetch_assoc($query)) {
+            $_SESSION['name']=$result['username'];
             $_SESSION['id_user']=$result['id_user'];
 
             if ($result['id_level']==1) {
@@ -28,7 +30,7 @@
                 // header('Location:adminPage.php');
             }else{
                 echo "<script>alert('Anda masuk sebagai Operator');</script>";
-                // header('Location:HalamanUtama.php');
+                header('Location:HalamanUtama.html');
             }
         }              
     }
