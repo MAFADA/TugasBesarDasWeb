@@ -7,33 +7,50 @@ body{
     font-family: 'Montserrat', sans-serif;
     overflow-x: hidden;
 }
-
-/* Nav Bar */
-/* nav{ */
-    /* position: fixed; */
-    /* width: 100%; */
-    /* display: flex; */
-    /* background-color: darkslategray; */
-    /* justify-content: space-between; */
-    /* padding: 0 30px; */
-    /* height: 55px; */
-    /* align-items: center; */
-    /* color: white; */
-/* } */
-
-#logo{
+.heading{
     top: 0;
-    padding: 0 30px;
     position: fixed;
+    width: 100%;
     display: flex;
-    align-items: center;
-    width: 100vmax;
     background-color: darkslategray;
+    justify-content: space-between;
+    padding-left: 30px;
     height: 55px;
+    align-items: center;
     font-family: 'Do Hyeon', sans-serif;
     letter-spacing: 2px;
     font-size: 20px;
     color: white;
+}
+
+.heading ul{
+    display: flex;
+    right: 0;
+    width: 350px;
+    padding-right: 60px;
+    justify-content: space-between;
+}
+
+.nm{
+    cursor: pointer;
+}
+.mdd{
+    display: none;
+}
+
+.dropdown{
+    right: 20px;
+    top: 55px;
+    position: fixed;
+    height: 40px;
+    border: none;
+    display: block;
+    width: 150px;
+    font-size: 15px;
+    border-radius: 3px;
+    cursor: pointer;
+    color: whitesmoke;
+    background-color: rgb(199, 0, 0);
 }
 
 nav ul{

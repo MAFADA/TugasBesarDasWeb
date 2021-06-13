@@ -12,4 +12,11 @@ for (i = 0; i < menuToggle.length; i++) {
         span[3].classList.toggle('hidden');
         cont.classList.toggle('on');
     });
-  } 
+  };
+  const drop = document.querySelector('.nm');
+  const down = document.querySelector('.mdd');
+  drop.addEventListener('click',function(){
+    down.classList.toggle('dropdown');
+});
+var dt = new Date();
+ document.getElementById("tanggalwaktu").innerHTML = dt.toLocaleDateString();
