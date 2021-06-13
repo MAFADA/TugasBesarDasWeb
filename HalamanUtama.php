@@ -1,3 +1,6 @@
+<?php
+    session_start();
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -12,6 +15,8 @@
 <body>
     <div id="logo">
         <h4>Perpustakaan</h4>
+        <!-- Ini nama akun yang login -->
+        <p>Akun: <?=$_SESSION['name']?></p>
     </div>
     <nav>
         
@@ -19,8 +24,8 @@
             <div class="menu"></div>
             <li><a href="#"><i class="fas fa-home"></i><span>Dashboard</span></a></li>
             <li><a href="#"><i class="fas fa-user"></i><span>Profil Perpustakaan</span></a></li>
-            <li><a href="#"><i class="fas fa-book"></i><span>Katalog Buku</span></a></li>
-            <li><a href="#"><i class="fas fa-pen"></i><span>Peminjaman</span></a></li>
+            <li><a href="KatalogBuku.php"><i class="fas fa-book"></i><span>Katalog Buku</span></a></li>
+            <li><a href="Peminjaman.php"><i class="fas fa-pen"></i><span>Peminjaman</span></a></li>
         </ul>
     </nav>
     <div class="off">

@@ -12,16 +12,12 @@
     }
 
     $query=mysqli_query($connect,"SELECT * FROM user WHERE username='$username' AND password='$password' AND id_level='$level'");
-    $cek=mysqli_num_rows($query);
-   
-    // $query=$connect->query($sql);
-    
-    // var_dump($result);
-    // $result=mysqli_query($connect,$query);//dapat digunakan untuk melakukan kueri terhadap database.
-    // $cek=mysqli_fetch_assoc($result);
+    $result=mysqli_fetch_assoc($query);
+    var_dump($result);
+    // $cek=mysqli_num_rows($query);
 
-    if($cek>0){ 
-        while ($row=mysqli_fetch_assoc($query)) {
+    if(mysqli_num_rows($query) > 0){ 
+        // while ($row=mysqli_fetch_assoc($query)) {            
             $_SESSION['name']=$result['username'];
             $_SESSION['id_user']=$result['id_user'];
 
@@ -30,14 +26,13 @@
                 // header('Location:adminPage.php');
             }else{
                 echo "<script>alert('Anda masuk sebagai Operator');</script>";
-                header('Location:HalamanUtama.html');
+                header('Location:HalamanUtama.php');
             }
-        }              
+        // }              
     }
     else{
         echo "<script>alert('Username dan Password Salah!');</script>";
         // $_SESSION['error']="Data yang anda masukkan salah,silahkan coba lagi";
-        // header('Location:LoginForm.php');
-        // echo mysqli_error($connect);
+        header('Location:LoginForm.php');
     }
     ?>

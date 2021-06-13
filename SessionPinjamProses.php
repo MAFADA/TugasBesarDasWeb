@@ -2,20 +2,21 @@
     session_start();
     include "koneksiDB.php";
 
-    $judul=$_GET['judul'];
-    $jmlh=$_GET['jumlah'];
-    $datePinjam=$_GET['pinjam'];
-    $dateKembali=$_GET['kembali'];
+    $idBuku=$_GET['id'];
+    $idUser=$_SESSION['id_user'];
+    $pinjam=$_GET['tglPinjam'];
+    $kembali=$_GET['tglKembali'];
+    $jumlah=$_GET['jumlah'];
 
-    $sql="SELECT * FROM buku WHERE judul='$judul';";
-    // $query=$connect->query($sql); //menjalankan kueri database
-    $result=mysqli_query($connect,$sql);
-    $row=mysqli_fetch_array($result);
-    $idBuku=$row['idBuku'];
+    $sql="INSERT INTO peminjaman(id_user) VALUES('$idUser');";
+    $sql .="SELECT * FROM peminjaman WHERE id_user='$idUser'";
+    $query=mysqli_multi_query($connect,$sql);
 
-    $peminjaman=$connect->query("INSERT INTO peminjaman(tglPinjam,tglKembali)
-                VALUES('$datePinjam','$dateKembali')");
-    $detail_pinjam=$connect->query("INSERT INTO detail_pinjam(idBuku,jml) 
-                     VALUES($idBuku',$jmlh)");
-
+    $sql1="INSERT INTO detail_pinjam(idPeminjaman,idBuku,tglPinjam,tglKembali,jml)VALUES('$idPeminjaman','$idBuku','$pinjam','$kembali',$jumlah);";
+    $query1=mysqli_query($connect,$sql1);
+    // $sql.=mysqli_query($connect,"SELECT pm.idPeminjaman FROM detail_pinjam dp
+    // LEFT OUTER JOIN peminjaman pm ON pm.idPeminjaman=dp.idPeminjaman
+    // WHERE pm.id_user='$idUser';");
+    
+    header('Location: Peminjaman.php');
 ?>
