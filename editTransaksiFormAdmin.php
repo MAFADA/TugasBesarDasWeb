@@ -1,10 +1,14 @@
+<?php
+session_start();
+include "koneksiDB.php";
+?>
 <html>
     <head>
         <title>Edit Status</title>
     </head>
     <body>
         <?php
-            include "koneksiDB.php";
+            
             $id=$_GET['id'];
             $query="SELECT * FROM detail_pinjam WHERE idDetail='$id';";
             $result=mysqli_query($connect,$query);

@@ -1,7 +1,6 @@
 <?php
-session_start();
+    session_start();
     include "koneksiDB.php";
-
 ?>
 <html>
     <head>

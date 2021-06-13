@@ -16,10 +16,9 @@
         <ul>
             <div class="menu"></div>
             <li><a href="#"><i class="fas fa-home"></i><span>Dashboard</span></a></li>
-            <li><a href="#"><i class="fas fa-user"></i><span>Profil Perpustakaan</span></a></li>
-            <li><a href="#"><i class="fas fa-book"></i><span>Katalog Buku</span></a></li>
-            <li><a href="#"><i class="fas fa-pen"></i><span>Peminjaman</span></a></li>
-        </ul>
+            <li><a href="DataAnggota.php"><i class="fas fa-user"></i><span>Data Anggota</span></a></li>
+            <li><a href="DataBuku.php"><i class="fas fa-book"></i><span>Data Buku</span></a></li>
+            <li><a href="TransaksiAdmin.php"><i class="fas fa-pen"></i><span>Transaksi</span></a></li>
     </nav>
     <script src="script.js"></script>
     
@@ -41,7 +40,7 @@
                     include "koneksiDB.php";
                     
                     // query tampil data buku
-                    $query=mysqli_query($connect,"SELECT dp.idDetail,u.nama,pm.tglPinjam,pm.tglKembali,b.judul,dp.jml,dp.status
+                    $query=mysqli_query($connect,"SELECT dp.idDetail,u.nama,dp.tglPinjam,dp.tglKembali,b.judul,dp.jml,dp.status
                     FROM detail_pinjam dp
                     LEFT OUTER JOIN peminjaman pm ON pm.idPeminjaman=dp.idPeminjaman
                     LEFT OUTER JOIN user u ON pm.id_user=u.id_user
