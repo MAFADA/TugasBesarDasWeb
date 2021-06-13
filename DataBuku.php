@@ -40,9 +40,7 @@
                     include "koneksiDB.php";
 
                     // query tampil data buku
-                    $query=mysqli_query($connect,"SELECT b.idBuku,b.kode_buku,b.judul,b.pengarang,p.nama_penerbit as Penerbit,b.tahun_terbit
-                    FROM buku b
-                    LEFT OUTER JOIN penerbit p ON p.id_penerbit=b.id_penerbit;");                
+                    $query=mysqli_query($connect,"SELECT * FROM buku");                
                 if (mysqli_num_rows($query)) {         
                     while ($row=mysqli_fetch_array($query)) {                                            
                 ?>
@@ -51,18 +49,19 @@
                             <td><?php echo $row['kode_buku']?></td>
                             <td><?php echo $row['judul']?></td>
                             <td><?php echo $row['pengarang']?></td>
-                            <td><?php echo $row['Penerbit']?></td>
+                            <td><?php echo $row['penerbit']?></td>
                             <td><?php echo $row['tahun_terbit']?></td>                        
                             <td>
                                 <a class="edit" href="editBukuFormAdmin.php?id=<?php echo $row['idBuku'];?>">Edit</a>
                                 <a class="hapus" href="hapusBuku.php?id=<?php echo $row['idBuku'];?>">Hapus</a>
                             </td>
-                        </tr>
+                        </tr>                        
                 <?php
                     }
                 }                 
                 ?>
             </table>           
+            <a href="addBuku.php">Tambah Buku</a>
         </div>
     </div>
 </body>
