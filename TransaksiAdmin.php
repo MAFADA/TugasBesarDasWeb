@@ -26,7 +26,7 @@
     <div class="container">
         <br>
         <div class="list-table">
-            <table border="1">
+            <table>
             <thead>
                 <tr>
                     <td>No</td>
@@ -35,32 +35,38 @@
                     <td>Tanggal Kembali</td>
                     <td>Judul</td>
                     <td>Jumlah</td>
+                    <td>Status</td>
                 </tr>
             </thead>
             <tbody>
                 <?php
                     include "koneksiDB.php";
-
-                    $no=1;
+                    
                     // query tampil data buku
-                    $query=mysqli_query($connect,"SELECT u.nama,pm.tglPinjam,pm.tglKembali,b.judul,dp.jml
+                    $query=mysqli_query($connect,"SELECT dp.idDetail,u.nama,pm.tglPinjam,pm.tglKembali,b.judul,dp.jml,dp.status
                     FROM detail_pinjam dp
                     LEFT OUTER JOIN peminjaman pm ON pm.idPeminjaman=dp.idPeminjaman
                     LEFT OUTER JOIN user u ON pm.id_user=u.id_user
                     LEFT OUTER JOIN buku b ON b.idBuku=dp.idBuku;");                
-                    
+                if (mysqli_num_rows($query)) {            
                     while ($row=mysqli_fetch_array($query)) {                                            
                 ?>
                         <tr>
-                            <td><?= $no++;?></td>
-                            <td><?= $row['nama'];?></td>
-                            <td><?= $row['tglPinjam'];?></td>
-                            <td><?= $row['tglKembali'];?></td>
-                            <td><?= $row['judul'];?></td>
-                            <td><?= $row['jml'];?></td>
+                            <td><?php echo $row['idDetail']?></td>
+                            <td><?php echo $row['nama']?></td>
+                            <td><?php echo $row['tglPinjam']?></td>
+                            <td><?php echo $row['tglKembali']?></td>
+                            <td><?php echo $row['judul']?></td>
+                            <td><?php echo $row['jml']?></td>
+                            <td><?php echo $row['status']?></td>
+                            <td>
+                                <a href="editTransaksiFormAdmin.php?id=<?php echo $row['idDetail'];?>">Edit &nbsp;</a>
+                                <a href="hapusTransaksi.php?id=<?php echo $row['idDetail'];?>">Hapus</a>
+                            </td>
                         </tr>
                 <?php
                     }                
+                }                    
                 ?>
             </tbody>
             </table>           

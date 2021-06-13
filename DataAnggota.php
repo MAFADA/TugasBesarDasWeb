@@ -27,26 +27,46 @@
         <br>
         <div class="list-table">
             <table>
-                <tr>
-                    <th>No</th>
-                    <th>No.Induk</th>
-                    <th>Nama Lengkap</th>                    
-                    <th>Alamat</th>
-                    <th>No HP</th>
-                    <th>Tanggal Diterima</th>
-                </tr>
+                <thead>
+                    <tr>
+                        <td>No</td>
+                        <td>No.Induk</td>
+                        <td>Nama Lengkap</td>                    
+                        <td>Alamat</td>
+                        <td>No HP</td>
+                        <td>Tanggal Diterima</td>
+                    </tr>            
+                </thead>
+                <tbody>
+                        <?php
+                        include "koneksiDB.php";
+
+                        $query="SELECT id_user,noInduk,nama,alamat,noHp,tglTerima 
+                        FROM user";
+                        $result = mysqli_query($connect,$query);
+
+                        if (mysqli_num_rows($result)) {
+                            while ($row=mysqli_fetch_array($result)) {                                            
+                        ?>
+                        <tr>
+                            <td><?php echo $row['id_user']?></td>
+                            <td><?php echo $row['noInduk']?></td>
+                            <td><?php echo $row['nama']?></td>                            
+                            <td><?php echo $row['alamat']?></td>
+                            <td><?php echo $row['noHp']?></td>
+                            <td><?php echo $row['tglTerima']?></td>                
+                            <td>
+                                <a href="editDataAnggota.php?id=<?php echo $row['id_user'];?>">Edit &nbsp;</a>
+                                <a href="hapusAnggota.php?id=<?php echo $row['id_user'];?>">Hapus</a>
+                            </td>
+                        </tr>
+                        <?php
+                            }
+                        }
+                        ?>
+                </tbody>
+            
             </table>
-            <?php
-                include "koneksiDB.php";
-
-                $query="SELECT id_user,noInduk,nama,alamat,noHp,tglTerima 
-                FROM user";
-                $result = mysqli_query($connect,$query);
-
-                if (mysqli_num_rows($result)) {
-                    # code...
-                }
-            ?>
         </div>
     </div>
 </body>
