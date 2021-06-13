@@ -48,14 +48,9 @@
                 </tr>
                 <?php                   
                     // query tampil data buku
-                    $query=mysqli_query($connect,"SELECT b.idBuku,b.kode_buku,b.judul,b.pengarang,p.nama_penerbit as Penerbit,b.tahun_terbit
-                    FROM buku b
-                    LEFT OUTER JOIN penerbit p ON p.id_penerbit=b.id_penerbit;");
+                    $query=mysqli_query($connect,"SELECT * FROM buku");
                     if (isset($_GET['cari'])) {
-                        $query=mysqli_query($connect,"SELECT b.idBuku,b.kode_buku,b.judul,b.pengarang,p.nama_penerbit as Penerbit,b.tahun_terbit
-                        FROM buku b
-                        LEFT OUTER JOIN penerbit p ON p.id_penerbit=b.id_penerbit
-                        WHERE b.judul LIKE '%".$_GET['cari']."%'OR p.nama_penerbit  LIKE'%".$_GET['cari']."%'");
+                        $query=mysqli_query($connect,"SELECT * FROM buku WHERE judul LIKE '%".$_GET['cari']."%' OR penerbit  LIKE'%".$_GET['cari']."%'");
                     } 
                     if (mysqli_num_rows($query)) {                                 
                         while ($row=mysqli_fetch_array($query)) {                                            
@@ -65,7 +60,7 @@
                                 <td><?php echo $row['kode_buku']?></td>
                                 <td><?php echo $row['judul']?></td>
                                 <td><?php echo $row['pengarang']?></td>
-                                <td><?php echo $row['Penerbit']?></td>
+                                <td><?php echo $row['penerbit']?></td>
                                 <td><?php echo $row['tahun_terbit']?></td>                        
                                 <td>
                                     <a class="pinjam" href="FormUploadPinjam.php?id=<?php echo $row['idBuku'];?>">Pinjam</a>                                    
