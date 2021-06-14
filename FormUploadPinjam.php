@@ -2,9 +2,10 @@
 session_start();
 include "koneksiDB.php";
 ?>
-<html>
+<!DOCTYPE html>
+<html lang="en">
     <head>
-        <title>Edit Status</title>
+        <title>Data Peminjaman</title>
         <link rel="stylesheet" type="text/css" href="DefaultCSS.css">
         <link rel="stylesheet" type="text/css" href="styleCSS.css">
         <script src="https:/kit.fontawesome.com/a076d05399.js"></script>
@@ -12,12 +13,18 @@ include "koneksiDB.php";
         <link href="https://fonts.googleapis.com/css2?family=Do+Hyeon&family=Montserrat&display=swap" rel="stylesheet"> 
     </head>
     <body>
-        <!-- Side bar -->
-
-        <div id="logo">
-            <h4>Perpustakaan</h4>
-            <p>Akun: <?=$_SESSION['name']?></p>
+        <div class="heading">
+            <div>
+                <h4>Perpustakaan</h4>
+            </div>
+            <ul>
+                <li><p>Tanggal: <span id="tanggalwaktu"></span></p></li>
+                <li class="nm">
+                    <span>Akun: <?=$_SESSION['name']?></span> <i class="fa fa-angle-down"></i>
+                </li>
+            </ul>
         </div>
+        <a href="waldan"><input class="mdd" type="button" value="Log Out"></a>
         <nav>
             <ul>
                 <div class="menu"></div>
@@ -28,26 +35,20 @@ include "koneksiDB.php";
             </ul>
         </nav>
         <script src="script.js"></script>
-
-        <!-- akhir side bar -->
         <?php           
             $idBuku=$_GET['id'];
             $query="SELECT * FROM buku WHERE idBuku='$idBuku'";
             $result=mysqli_query($connect,$query);        
         ?>
         <div class="container">
+        <br>
+        <h1>PEMINJAMAN BUKU</h1>
+        <br>
             <table class="table2">
                 <form action="SessionPinjamProses.php" method="get">
                     <?php
                         while ($row=mysqli_fetch_array($result)) {                                            
                     ?>
-                    <thead>
-                        <tr>
-                            <th colspan="2">
-                                PEMINJAMAN BUKU
-                            </th>
-                        </tr>
-                    </thead>
                     <tbody>
                         <tr>
                             <td class="kolom1">Id Buku</td>

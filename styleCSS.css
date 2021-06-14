@@ -2,40 +2,60 @@
     margin: 0;
     padding: 0;
 }
-
+h1{
+    text-align: center;
+    font-family: 'Do Hyeon', sans-serif;
+    color: white;
+    letter-spacing: 2px;
+    font-size: 25px;
+}
 body{
+    background-color: rgb(78, 138, 138);
     font-family: 'Montserrat', sans-serif;
     overflow-x: hidden;
 }
-
-/* Nav Bar */
-/* nav{ */
-    /* position: fixed; */
-    /* width: 100%; */
-    /* display: flex; */
-    /* background-color: darkslategray; */
-    /* justify-content: space-between; */
-    /* padding: 0 30px; */
-    /* height: 55px; */
-    /* align-items: center; */
-    /* color: white; */
-/* } */
-
-#logo{
+.heading{
     top: 0;
-    padding: 0 30px;
     position: fixed;
+    width: 100%;
     display: flex;
-    align-items: center;
-    width: 100vmax;
     background-color: darkslategray;
+    justify-content: space-between;
+    padding-left: 30px;
     height: 55px;
+    align-items: center;
     font-family: 'Do Hyeon', sans-serif;
     letter-spacing: 2px;
     font-size: 20px;
     color: white;
 }
-
+.heading ul{
+    display: flex;
+    right: 0;
+    width: 350px;
+    padding-right: 60px;
+    justify-content: space-between;
+}
+.nm{
+    cursor: pointer;
+}
+.mdd{
+    display: none;
+}
+.dropdown{
+    right: 20px;
+    top: 55px;
+    position: fixed;
+    height: 40px;
+    border: none;
+    display: block;
+    width: 150px;
+    font-size: 15px;
+    border-radius: 3px;
+    cursor: pointer;
+    color: whitesmoke;
+    background-color: rgb(199, 0, 0);
+}
 nav ul{
     display: flex;
     list-style: none;
@@ -50,30 +70,25 @@ nav ul{
     background-color: rgb(62, 104, 104);
     overflow-x: hidden;
 }
-
 nav ul li a{
     color: white;
     text-decoration: none;
     height: 30px;
     display: block;
 }
-
 nav ul li{
     display: block;
     text-align: left;
     width: 100%;
     border-left: 3px solid transparent;
 }
-
 nav ul li:hover{
     border-color: lightblue;
     background-color: darkslategray;
 }
-
 nav ul li a:hover{
     color: lightskyblue;
 }
-
 nav ul li a i{
     font-size: 16px;
     text-shadow: none;
@@ -84,7 +99,6 @@ nav ul li a i{
 nav ul li a span{
     display: none;
 }
-
 .menu{
     display: block;
     cursor: pointer;
@@ -98,7 +112,6 @@ nav ul li a span{
     float: right;
     background: url(menu.jpg);
 }
-
 nav ul.slide{
     display: flex;
     list-style: none;
@@ -114,31 +127,31 @@ nav ul.slide{
     overflow-x: hidden;
     align-items: center;
 }
-
 nav ul li a span.hidden{
     display: inline;
     font-size: 12px;
 }
-
 div.off{
     background-color: #eceef1;
     margin: 65px 10px 10px 60px;
 }
-
 div.on{
     margin-left: 210px;
 }
-
 /* Login CSS */
+.container-table, .container{
+    width: 100;
+    height: auto;
+    margin: 55px 0px 10px 50px;
+    padding: 10px 40px 30px 40px;
+}
 .container {
-    background-color: rgb(67, 114, 114);
     width: 800px;
     height: auto;
     margin: 80px auto 10px auto;
-    padding: 10px 40px 30px 40px;
     border-radius: 6px;
+    background-color: darkslategray;
 }
-
 .a{
     background-color: #dde3ec;
     height: 30px;
@@ -157,9 +170,11 @@ div.on{
     border: none;
     display: block;
     width: 100%;
-    font-size: 15px;
+    font-size: 17px;
     border-radius: 3px;
     text-decoration: none;
+    font-weight: bold;
+    color: white;
 }
 .login {
     background-color: rgb(0, 191, 255);
@@ -180,7 +195,6 @@ label{
     font-size: 14px;
     border-radius: 3px;
 }
-
 .table1 {
     font-family: sans-serif;
     color: white;
@@ -188,50 +202,41 @@ label{
     width: 100%;
     border: 1px solid rgb(67, 114, 114);
 }
- 
 .table1 tr th{
-    background: #35A9DB;
-    /* color: #fff; */
+    background: darkslategray;
     font-weight: normal;
 }
- 
 .table1, th, td {
     padding: 8px 20px;
     text-align: center;
     vertical-align: middle;
 }
- 
 .table1 tr:nth-child(even) {
     background-color: #f2f2f2;
     color: black;
 }
-
 .table2 {
     font-family: sans-serif;
     color: white;
     border-collapse: collapse;
     width: 100%;
 }
- 
 .table2 tr th{
     font-weight: normal;
     text-align: center;
 }
-
 .kolom1{
     width: 150px;
 }
-
 .table2, th, td {
     padding: 8px 20px;
     text-align: left;
     vertical-align: middle;
 }
-
 .edit, .hapus{
     margin: 3px;
     display: block;
-    height: 20px;
+    height: 15px;
     width: 60px;
     text-align: center;
     border-radius: 3px;
@@ -246,4 +251,7 @@ label{
 }
 a{
     text-decoration: none;
+}
+.tb1{
+    text-align: center;
 }
