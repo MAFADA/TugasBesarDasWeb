@@ -10,13 +10,21 @@
     <script src="https:/kit.fontawesome.com/a076d05399.js"></script>
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Do+Hyeon&family=Montserrat&display=swap" rel="stylesheet"> 
-    <title>Data Buku</title>
+    <title>Data Anggota</title>
 </head>
 <body>
-    <div id="logo">
-        <h4>Perpustakaan</h4>
-        <p>Akun: <?=$_SESSION['name']?></p>
+<div class="heading">
+        <div id="logo">
+            <h4>Perpustakaan</h4>
+        </div>
+        <ul>
+            <li><p>Tanggal: <span id="tanggalwaktu"></span></p></li>
+            <li class="nm">
+                <span>Akun: <?=$_SESSION['name']?></span> <i class="fa fa-angle-down"></i>
+            </li>
+        </ul>
     </div>
+    <a href="waldan"><input class="mdd" type="button" value="Log Out"></a>
     <nav>
         <ul>
             <div class="menu"></div>
@@ -28,22 +36,22 @@
     </nav>
     <script src="script.js"></script>
     
-    <div class="container">
+    <div class="container-table">
         <br>
-        <div class="list-table">            
+        <h1>DAFTAR KATALOG BUKU</h1>
+        <br>           
             <form action="" method="get">            
                 <input type="text" name='cari' placeholder='Cari buku'>
             </form>
             <br>
-
             <table class="table1">
                 <tr>
-                    <th>No</th>
-                    <th>Kode Buku</th>
-                    <th>Judul</th>                    
-                    <th>Pengarang</th>
-                    <th>Penerbit</th>
-                    <th>Tahun Terbit</th>
+                    <th class="tb1">No</th>
+                    <th class="tb1">Kode Buku</th>
+                    <th class="tb1">Judul</th>                    
+                    <th class="tb1">Pengarang</th>
+                    <th class="tb1">Penerbit</th>
+                    <th class="tb1">Tahun Terbit</th>
                     <th></th>
                 </tr>
                 <?php                   
@@ -56,22 +64,21 @@
                         while ($row=mysqli_fetch_array($query)) {                                            
                     ?>
                             <tr class="tb">
-                                <td><?php echo $row['idBuku']?></td>
-                                <td><?php echo $row['kode_buku']?></td>
-                                <td><?php echo $row['judul']?></td>
-                                <td><?php echo $row['pengarang']?></td>
-                                <td><?php echo $row['penerbit']?></td>
-                                <td><?php echo $row['tahun_terbit']?></td>                        
+                                <td class="tb1"><?php echo $row['idBuku']?></td>
+                                <td class="tb1"><?php echo $row['kode_buku']?></td>
+                                <td class="tb1"><?php echo $row['judul']?></td>
+                                <td class="tb1"><?php echo $row['pengarang']?></td>
+                                <td class="tb1"><?php echo $row['penerbit']?></td>
+                                <td class="tb1"><?php echo $row['tahun_terbit']?></td>                        
                                 <td>
-                                    <a class="pinjam" href="FormUploadPinjam.php?id=<?php echo $row['idBuku'];?>">Pinjam</a>                                    
+                                    <a class="edit" href="FormUploadPinjam.php?id=<?php echo $row['idBuku'];?>">Pinjam</a>                                    
                                 </td>
                             </tr>
                 <?php
                     }
                 }                 
                 ?>
-            </table>           
-        </div>
+            </table>
     </div>
 </body>
 </html>
