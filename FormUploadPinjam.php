@@ -79,11 +79,11 @@ include "koneksiDB.php";
                             <th colspan="2">
                                 <input class="pinjam" type="submit" name="pinjam" value='pinjam'>
                             </th>
-                            <form action="" method="get">
+                            <!-- <form action="" method="get">
                             <th colspan="2">
                                 <input class="konfirm" type="submit" name="konfirm" value='konfirm'>
                             </th>
-                            </form>
+                            </form> -->
                         </tr>                
                     </tfoot>                
                     <?php

@@ -47,10 +47,9 @@
                 </tr>
                 <?php                   
                     // query tampil data buku
-                    $query=mysqli_query($connect,"SELECT dp.idDetail,u.nama,b.kode_buku,b.judul,dp.tglPinjam,
-                    dp.tglKembali,jml,status FROM detail_pinjam dp
+                    $query=mysqli_query($connect,"SELECT dp.idDetail,u.nama,b.kode_buku,b.judul,pm.tglPinjam,
+                    pm.tglKembali,jml,status FROM detail_pinjam dp
                     LEFT OUTER JOIN buku b ON b.idBuku=dp.idBuku
-                    LEFT OUTER JOIN penerbit p ON p.id_penerbit=b.id_penerbit
                     LEFT OUTER JOIN peminjaman pm ON pm.idPeminjaman=dp.idPeminjaman
                     LEFT OUTER JOIN user u ON u.id_user=pm.id_user");
                 
