@@ -255,3 +255,81 @@ a{
 .tb1{
     text-align: center;
 }
+/* __HALAMAN PROFILE__ */
+/* BANNER */
+.ban{
+    z-index: -1;
+    margin-top: 55px;
+    margin-left: 50px;
+    height: 60vh;
+    background-image: url("banner.jpg");
+    background-size: cover;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.ban::after{
+    content: '';
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: darkslategray;
+    opacity: 0.5;
+}
+.ban h1{
+    z-index: 1;
+    padding: 20px 25px;
+    border: 3px solid #fff;
+}
+section{
+    padding: 30px 0;
+}
+/* ABOUT */
+.about{
+    margin: 40px 40px 40px 90px;
+    background-color: whitesmoke;
+}
+section h2{
+    font-weight: bold;
+    text-align: center;
+    font-size: large;
+    padding: 20px 0;
+    color: black;
+}
+.about p{
+    word-spacing: 2px;
+    line-height: 25px;
+    text-align: center;
+    padding: 0 25px;
+}
+/* CONTACT */
+.contact{
+    color: white;
+    margin-left: 50px;
+    background-color: rgb(37, 61, 61);
+}
+.contact div h2{
+    color: white;
+}
+.box{
+    display: flex;
+    text-align: center;
+    justify-content: space-evenly;
+}
+.col-4 h3{
+    font-size: large;
+    font-weight: bold;
+    padding: 15px 0;
+}
+/* COPYRIGNT */
+.copyright{
+    font-size: small;
+    color: white;
+    margin-left: 50px;
+    padding: 5px 5px;
+    background-color: black;
+}
