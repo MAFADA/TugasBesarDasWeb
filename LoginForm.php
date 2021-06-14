@@ -1,3 +1,8 @@
+<?php
+session_start();
+include "koneksiDB.php";
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -12,22 +17,12 @@
 <body>
 <div id="logo">
         <h4>Perpustakaan</h4>
-    </div>
+</div>
     <script src="script.js"></script>
 
     <div class="container">
         <br>
         <form action="SessionLoginMultiProses.php" method="POST">
-            <!--        <div class='form-group'>
-                <label for="username">Username</label>
-                <input type="text" name="ni" id="ni" class='a' 
-                placeholder='Masukkan username' autofocus>
-            </div>
-            <div class='form-group'>
-                <label for="password">Password</label>
-                <input type="password" name="password" id="password" class='a' 
-                placeholder='Masukkan password' autofocus>
-            </div> -->
             <input type="text" class="a" name="ni" id="ni" placeholder="Nomor Induk/Username"><br>
             <input type="password" class="a" name="password" id="password" placeholder="Password"><br>
             <label for="Level">Level</label>

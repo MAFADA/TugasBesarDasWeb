@@ -1,3 +1,6 @@
+<?php
+    session_start();
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -10,16 +13,10 @@
     <link href="https://fonts.googleapis.com/css2?family=Do+Hyeon&family=Montserrat&display=swap" rel="stylesheet"> 
 </head>
 <body>
-    <div class="heading">
-        <div id="logo">
-            <h4>Perpustakaan</h4>
-        </div>
-        <ul>
-            <li><p>Tanggal: <span id="tanggalwaktu"></span></p></li>
-            <li class="nm">
-                <span>Waldan</span> <i class="fa fa-angle-down"></i>
-            </li>
-        </ul>
+    <div id="logo">
+        <h4>Perpustakaan</h4>
+        <!-- Ini nama akun yang login -->
+        <p>Akun: <?=$_SESSION['name']?></p>
     </div>
     <a href="waldan"><input class="mdd" type="button" value="Log Out"></a>
     <nav>
@@ -27,8 +24,8 @@
             <div class="menu"></div>
             <li><a href="#"><i class="fas fa-home"></i><span>Dashboard</span></a></li>
             <li><a href="#"><i class="fas fa-user"></i><span>Profil Perpustakaan</span></a></li>
-            <li><a href="#"><i class="fas fa-book"></i><span>Katalog Buku</span></a></li>
-            <li><a href="#"><i class="fas fa-pen"></i><span>Peminjaman</span></a></li>
+            <li><a href="KatalogBuku.php"><i class="fas fa-book"></i><span>Katalog Buku</span></a></li>
+            <li><a href="Peminjaman.php"><i class="fas fa-pen"></i><span>Peminjaman</span></a></li>
         </ul>
     </nav>
     <div class="off">

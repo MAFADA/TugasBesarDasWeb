@@ -1,3 +1,7 @@
+<?php
+session_start();
+include "koneksiDB.php";
+?>
 <html>
     <head>
         <title>Edit Status</title>
@@ -12,43 +16,42 @@
 
         <div id="logo">
             <h4>Perpustakaan</h4>
+            <p>Akun: <?=$_SESSION['name']?></p>
         </div>
         <nav>
             <ul>
                 <div class="menu"></div>
                 <li><a href="#"><i class="fas fa-home"></i><span>Dashboard</span></a></li>
-                <li><a href="DataAnggota.php"><i class="fas fa-user"></i><span>Data Anggota</span></a></li>
-                <li><a href="DataBuku.php"><i class="fas fa-book"></i><span>Data Buku</span></a></li>
-                <li><a href="TransaksiAdmin.php"><i class="fas fa-pen"></i><span>Transaksi</span></a></li>
+                <li><a href="#"><i class="fas fa-user"></i><span>Profil Perpustakaan</span></a></li>
+                <li><a href="KatalogBuku.php"><i class="fas fa-book"></i><span>Katalog Buku</span></a></li>
+                <li><a href="Peminjaman.php"><i class="fas fa-pen"></i><span>Peminjaman</span></a></li>
             </ul>
         </nav>
         <script src="script.js"></script>
 
         <!-- akhir side bar -->
-        <?php
-            include "koneksiDB.php";
-            $id=$_GET['id'];
-            $query="SELECT * FROM buku WHERE idBuku='$id';";
-            $result=mysqli_query($connect,$query);
-        
+        <?php           
+            $idBuku=$_GET['id'];
+            $query="SELECT * FROM buku WHERE idBuku='$idBuku'";
+            $result=mysqli_query($connect,$query);        
         ?>
         <div class="container">
             <table class="table2">
-                <form action="prosesEditBuku.php" method="get">
+                <form action="SessionPinjamProses.php" method="get">
                     <?php
                         while ($row=mysqli_fetch_array($result)) {                                            
                     ?>
                     <thead>
                         <tr>
                             <th colspan="2">
-                                PERUBAHAN DATA BUKU
+                                PEMINJAMAN BUKU
                             </th>
                         </tr>
                     </thead>
                     <tbody>
                         <tr>
-                            <td class="kolom1">Id</td>
-                            <td><input class="a" type="number" name='id' value="<?php echo $row['idBuku'];?>" readonly></td>
+                            <td class="kolom1">Id Buku</td>
+                            <td><input class="a" type="number" name='id' value="<?php echo $idBuku;?>" readonly></td>
                         </tr>
                         <tr>
                            <td>Kode Buku</td>
@@ -59,23 +62,28 @@
                            <td><input class="a" type="text" name="judul" value="<?php echo $row['judul'];?>"></td>
                         </tr>
                         <tr>
-                           <td>Pengarang</td>
-                           <td><input class="a" type="text" name="pengarang" value="<?php echo $row['pengarang'];?>"></td>
+                           <td>Tanggal Pinjam</td>
+                           <td><input class="a" type="date" name="tglPinjam"></td>
                         </tr>
                         <tr>
-                           <td>Penerbit</td>
-                           <td><input class="a" type="text" name="penerbit" value="<?php echo $row['penerbit'];?>"></td>
+                            <td>Tanggal Kembali</td>
+                           <td><input class="a" type="date" name="tglKembali"></td>
                         </tr>
                         <tr>
-                           <td>Tahun Terbit</td>
-                           <td><input class="a" type="number" name="tahunTerbit" value="<?php echo $row['tahun_terbit'];?>"></td>
+                            <td class="kolom1">Jumlah</td>
+                            <td><input class="a" type="number" name='jumlah'></td>
                         </tr>
                     </tbody>
                     <tfoot>
                         <tr>
                             <th colspan="2">
-                                <input class="register" type="submit" name="edit" value='Edit'>
+                                <input class="pinjam" type="submit" name="pinjam" value='pinjam'>
                             </th>
+                            <form action="" method="get">
+                            <th colspan="2">
+                                <input class="konfirm" type="submit" name="konfirm" value='konfirm'>
+                            </th>
+                            </form>
                         </tr>                
                     </tfoot>                
                     <?php

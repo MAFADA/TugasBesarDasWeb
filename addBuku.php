@@ -1,3 +1,8 @@
+<?php
+            session_start();
+            include "koneksiDB.php";
+        
+        ?>
 <html>
     <head>
         <title>Edit Status</title>
@@ -25,61 +30,46 @@
         <script src="script.js"></script>
 
         <!-- akhir side bar -->
-        <?php
-            include "koneksiDB.php";
-            $id=$_GET['id'];
-            $query="SELECT * FROM user WHERE id_user='$id';";
-            $result=mysqli_query($connect,$query);
-        ?>
+        
         <div class="container">
             <table class="table2">
-                <form action="prosesEditAnggota.php" method="get">
-                    <?php
-                        while ($row=mysqli_fetch_array($result)) {                                            
-                    ?>
+                <form action="prosesAddBuku.php" method="get">                
                     <thead>
                         <tr>
                             <th colspan="2">
-                                PERUBAHAN DATA ANGGOTA
+                               TAMBAH DATA BUKU
                             </th>
                         </tr>
                     </thead>
-                    <tbody>
+                    <tbody>                    
                         <tr>
-                            <td class="kolom1">Id</td>
-                            <td><input class="a" type="number" name='id' value="<?php echo $row['id_user'];?>" readonly></td>
+                           <td>Kode Buku</td>
+                           <td><input class="a" type="text" name="kode"></td>
                         </tr>
                         <tr>
-                           <td>No Induk</td>
-                           <td><input class="a" type="text" name="no" value="<?php echo $row['noInduk'];?>"></td>
+                           <td>Judul</td>
+                           <td><input class="a" type="text" name="judul"></td>
                         </tr>
                         <tr>
-                           <td>Nama</td>
-                           <td><input class="a" type="text" name="nama" value="<?php echo $row['nama'];?>"></td>
+                           <td>Pengarang</td>
+                           <td><input class="a" type="text" name="pengarang"></td>
                         </tr>
                         <tr>
-                           <td>Alamat</td>
-                           <td><input class="a" type="text" name="alamat" value="<?php echo $row['alamat'];?>"></td>
+                           <td>Penerbit</td>
+                           <td><input class="a" type="text" name="penerbit"></td>
                         </tr>
                         <tr>
-                           <td>No HP</td>
-                           <td><input class="a" type="text" name="hp" value="<?php echo $row['noHp'];?>"></td>
-                        </tr>
-                        <tr>
-                           <td>Tanggal Diterima</td>
-                           <td><input class="a" type="date" name="terima" value="<?php echo $row['tglTerima'];?>"></td>
+                           <td>Tahun Terbit</td>
+                           <td><input class="a" type="number" name="tahunTerbit"></td>
                         </tr>
                     </tbody>
                     <tfoot>
                         <tr>
                             <th colspan="2">
-                                <input class="register" type="submit" name="edit" value='Edit'>
+                                <input class="register" type="submit" name="tambah" value='tambah'>
                             </th>
                         </tr>                
-                    </tfoot>
-                    <?php
-                }
-                    ?>
+                    </tfoot>                                   
                 </form>
             </table>
         </div>
