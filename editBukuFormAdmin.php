@@ -1,6 +1,7 @@
-<html>
+<!DOCTYPE html>
+<html lang="en">
     <head>
-        <title>Edit Status</title>
+        <title>Edit Data Buku</title>
         <link rel="stylesheet" type="text/css" href="DefaultCSS.css">
         <link rel="stylesheet" type="text/css" href="styleCSS.css">
         <script src="https:/kit.fontawesome.com/a076d05399.js"></script>
@@ -8,23 +9,28 @@
         <link href="https://fonts.googleapis.com/css2?family=Do+Hyeon&family=Montserrat&display=swap" rel="stylesheet"> 
     </head>
     <body>
-        <!-- Side bar -->
-
-        <div id="logo">
-            <h4>Perpustakaan</h4>
+        <div class="heading">
+            <div>
+                <h4>Perpustakaan</h4>
+            </div>
+            <ul>
+                <li><p>Tanggal: <span id="tanggalwaktu"></span></p></li>
+                <li class="nm">
+                    <span>Akun: <?=$_SESSION['name']?></span> <i class="fa fa-angle-down"></i>
+                </li>
+            </ul>
         </div>
+        <a href="waldan"><input class="mdd" type="button" value="Log Out"></a>
         <nav>
             <ul>
                 <div class="menu"></div>
                 <li><a href="#"><i class="fas fa-home"></i><span>Dashboard</span></a></li>
-                <li><a href="DataAnggota.php"><i class="fas fa-user"></i><span>Data Anggota</span></a></li>
-                <li><a href="DataBuku.php"><i class="fas fa-book"></i><span>Data Buku</span></a></li>
-                <li><a href="TransaksiAdmin.php"><i class="fas fa-pen"></i><span>Transaksi</span></a></li>
+                <li><a href="#"><i class="fas fa-user"></i><span>Profil Perpustakaan</span></a></li>
+                <li><a href="KatalogBuku.php"><i class="fas fa-book"></i><span>Katalog Buku</span></a></li>
+                <li><a href="Peminjaman.php"><i class="fas fa-pen"></i><span>Peminjaman</span></a></li>
             </ul>
         </nav>
         <script src="script.js"></script>
-
-        <!-- akhir side bar -->
         <?php
             include "koneksiDB.php";
             $id=$_GET['id'];
@@ -33,18 +39,14 @@
         
         ?>
         <div class="container">
+        <br>
+        <h1>EDIT DATA BUKU</h1>
+        <br>
             <table class="table2">
                 <form action="prosesEditBuku.php" method="get">
                     <?php
                         while ($row=mysqli_fetch_array($result)) {                                            
                     ?>
-                    <thead>
-                        <tr>
-                            <th colspan="2">
-                                PERUBAHAN DATA BUKU
-                            </th>
-                        </tr>
-                    </thead>
                     <tbody>
                         <tr>
                             <td class="kolom1">Id</td>

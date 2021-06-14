@@ -15,12 +15,20 @@ include "koneksiDB.php";
     <title>Login Page</title>
 </head>
 <body>
-<div id="logo">
-        <h4>Perpustakaan</h4>
-</div>
+<div class="heading">
+        <div>
+            <h4>Perpustakaan</h4>
+        </div>
+        <ul>
+            <li class="nm"></li>
+            <li><p>Tanggal: <span id="tanggalwaktu"></span></p></li>
+        </ul>
+    </div>
     <script src="script.js"></script>
 
     <div class="container">
+        <br>
+        <h1>LOGIN</h1>
         <br>
         <form action="SessionLoginMultiProses.php" method="POST">
             <input type="text" class="a" name="ni" id="ni" placeholder="Nomor Induk/Username"><br>

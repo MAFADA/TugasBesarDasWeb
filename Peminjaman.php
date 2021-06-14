@@ -10,13 +10,21 @@
     <script src="https:/kit.fontawesome.com/a076d05399.js"></script>
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Do+Hyeon&family=Montserrat&display=swap" rel="stylesheet"> 
-    <title>Data Buku</title>
+    <title>Data Peminjaman</title>
 </head>
 <body>
-    <div id="logo">
-        <h4>Perpustakaan</h4>
-        <p>Akun: <?=$_SESSION['name']?></p>
+<div class="heading">
+        <div id="logo">
+            <h4>Perpustakaan</h4>
+        </div>
+        <ul>
+            <li><p>Tanggal: <span id="tanggalwaktu"></span></p></li>
+            <li class="nm">
+                <span>Akun: <?=$_SESSION['name']?></span> <i class="fa fa-angle-down"></i>
+            </li>
+        </ul>
     </div>
+    <a href="waldan"><input class="mdd" type="button" value="Log Out"></a>
     <nav>
         <ul>
             <div class="menu"></div>
@@ -30,19 +38,18 @@
     
     <div class="container">
         <br>
-        <div class="list-table">            
-            <br>
-
+        <h1>LIST DATA PEMINJAMAN</h1>          
+        <br>
             <table class="table1">
                 <tr>
-                    <th>No</th>
-                    <th>Peminjam</th>
-                    <th>Kode buku</th>                    
-                    <th>Judul</th>
-                    <th>Tanggal Pinjam</th>
-                    <th>Tanggal Kembali</th>
-                    <th>Jumlah</th>
-                    <th>Status</th>
+                    <th class="tb1">No</th>
+                    <th class="tb1">Peminjam</th>
+                    <th class="tb1">Kode buku</th>                    
+                    <th class="tb1">Judul</th>
+                    <th class="tb1">Tanggal Pinjam</th>
+                    <th class="tb1">Tanggal Kembali</th>
+                    <th class="tb1">Jumlah</th>
+                    <th class="tb1">Status</th>
                     <th></th>
                 </tr>
                 <?php                   
@@ -57,24 +64,23 @@
                         while ($row=mysqli_fetch_array($query)) {                                            
                     ?>
                             <tr class="tb">
-                                <td><?php echo $row['idDetail']?></td>
-                                <td><?php echo $row['nama']?></td>
-                                <td><?php echo $row['kode_buku']?></td>
-                                <td><?php echo $row['judul']?></td>
-                                <td><?php echo $row['tglPinjam']?></td>
-                                <td><?php echo $row['tglKembali']?></td>
-                                <td><?php echo $row['jml']?></td>
-                                <td><?php echo $row['status']?></td>
+                                <td class="tb1"><?php echo $row['idDetail']?></td>
+                                <td class="tb1"><?php echo $row['nama']?></td>
+                                <td class="tb1"><?php echo $row['kode_buku']?></td>
+                                <td class="tb1"><?php echo $row['judul']?></td>
+                                <td class="tb1"><?php echo $row['tglPinjam']?></td>
+                                <td class="tb1"><?php echo $row['tglKembali']?></td>
+                                <td class="tb1"><?php echo $row['jml']?></td>
+                                <td class="tb1"><?php echo $row['status']?></td>
                                 <td>
-                                    <a class="pinjam" href="editPerpanjangan.php?id=<?php echo $row['idDetail'];?>">Perpanjang</a>                                    
+                                    <a class="edit" href="editPerpanjangan.php?id=<?php echo $row['idDetail'];?>">Perpanjang</a>                                    
                                 </td>
                             </tr>
                 <?php
                     }
                 }                 
                 ?>
-            </table>           
-        </div>
+            </table>
     </div>
 </body>
 </html>
