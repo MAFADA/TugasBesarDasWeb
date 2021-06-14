@@ -78,7 +78,7 @@ include "koneksiDB.php";
                     <tfoot>
                         <tr>
                             <th colspan="2">
-                                <input class="pinjam" type="submit" name="pinjam" value='pinjam'>
+                                <input class="register" type="submit" name="pinjam" value='Pinjam'>
                             </th>
                             <!-- <form action="" method="get">
                             <th colspan="2">

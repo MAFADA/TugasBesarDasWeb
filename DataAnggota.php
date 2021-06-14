@@ -33,9 +33,9 @@
     <script src="script.js"></script>
     
     <div class="container-table">
-    <br>
-    <h1>LIST DATA ANGGOTA</h1>
-    <br>
+        <br>
+        <h1>LIST DATA ANGGOTA</h1>
+        <br>
         <table class="table1">
             <thead>
                 <tr>
