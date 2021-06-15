@@ -1,5 +1,5 @@
 <?php
-    include "koneksiDB.php";
+    include "../proses/koneksiDB.php";
 
     $id=$_GET['id'];
     $status=$_GET['status'];
@@ -10,9 +10,9 @@
 
     if ($result) {
         echo "<script>alert('Status berhasil diubah');</script>";
-        header('Location: TransaksiAdmin.php');
+        header('Location: ../halaman/TransaksiAdmin.php');
     }else{
         echo "<script>alert('Status gagal diubah');</script>";
-        header('Location: editTransaksiFormAdmin.php');
+        header('Location: ../halaman/editTransaksiFormAdmin.php');
     }
 ?>

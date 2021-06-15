@@ -1,5 +1,5 @@
 <?php
-    include "koneksiDB.php";
+   include "../proses/koneksiDB.php";
 
    $kode=$_GET['kode'];
    $judul=$_GET['judul'];
@@ -12,11 +12,11 @@
 
     if(mysqli_query($connect,$sql)) {
         echo "<script>alert('Berhasil ditambah');</script>";
-        header('Location: DataBuku.php');
+        header('Location: ../halaman/DataBuku.php');
    
     }else{
         echo "<script>alert('Gagal ditambah');</script>";
-        header('Location: addBuku.php');
+        header('Location: ../halaman/addBuku.php');
     }
     mysqli_close($connect);
     ?>
