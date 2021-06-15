@@ -1,6 +1,5 @@
 <?php
-    include "koneksiDB.php";
-
+   include "../proses/koneksiDB.php";
     $id=$_GET['id'];
 
     $query="DELETE FROM user WHERE id_user='$id'";
@@ -8,8 +7,9 @@
 
     if($result){
         echo "<script>alert('Data berhasil dihapus');</script>";
-        header('Location: DataAnggota.php');
+        header('Location: ../halaman/DataAnggota.php');
     }else {
         echo "<script>alert('Data gagal dihapus');</script>";
+        header('Location: ../halaman/DataAnggota.php');
     }
 ?>

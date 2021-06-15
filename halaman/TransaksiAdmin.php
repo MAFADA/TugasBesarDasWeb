@@ -1,8 +1,12 @@
+<?php
+session_start();
+  include "../proses/koneksiDB.php";
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <link rel="stylesheet" type="text/css" href="DefaultCSS.css">
-    <link rel="stylesheet" type="text/css" href="styleCSS.css">
+        <link rel="stylesheet" type="text/css" href="../DefaultCSS.css">
+        <link rel="stylesheet" type="text/css" href="../styleCSS.css">
     <script src="https:/kit.fontawesome.com/a076d05399.js"></script>
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Do+Hyeon&family=Montserrat&display=swap" rel="stylesheet"> 
@@ -16,9 +20,9 @@
         <ul>
             <div class="menu"></div>
             <li><a href="#"><i class="fas fa-home"></i><span>Dashboard</span></a></li>
-            <li><a href="DataAnggota.php"><i class="fas fa-user"></i><span>Data Anggota</span></a></li>
-            <li><a href="DataBuku.php"><i class="fas fa-book"></i><span>Data Buku</span></a></li>
-            <li><a href="TransaksiAdmin.php"><i class="fas fa-pen"></i><span>Transaksi</span></a></li>
+            <li><a href="../halaman/DataAnggota.php"><i class="fas fa-user"></i><span>Data Anggota</span></a></li>
+            <li><a href="../halaman/DataBuku.php"><i class="fas fa-book"></i><span>Data Buku</span></a></li>
+            <li><a href="../halaman/TransaksiAdmin.php"><i class="fas fa-pen"></i><span>Transaksi</span></a></li>
     </nav>
     <script src="script.js"></script>
     
@@ -36,9 +40,7 @@
                     <th>Status</th>
                     <th></th>
                 </tr>
-                <?php
-                    include "koneksiDB.php";
-                    
+                <?php                                      
                     // query tampil data buku
                     $query=mysqli_query($connect,"SELECT dp.idDetail,u.nama,dp.tglPinjam,dp.tglKembali,b.judul,dp.jml,dp.status
                     FROM detail_pinjam dp
@@ -57,8 +59,8 @@
                             <td><?php echo $row['jml']?></td>
                             <td><?php echo $row['status']?></td>
                             <td>
-                                <a class="edit" href="editTransaksiFormAdmin.php?id=<?php echo $row['idDetail'];?>">Edit</a>
-                                <a class="hapus" href="hapusTransaksi.php?id=<?php echo $row['idDetail'];?>">Hapus</a>
+                                <a class="edit" href="../halaman/editTransaksiFormAdmin.php?id=<?php echo $row['idDetail'];?>">Edit</a>
+                                <a class="hapus" href="../proses/hapusTransaksi.php?id=<?php echo $row['idDetail'];?>">Hapus</a>
                             </td>
                         </tr>
                 <?php

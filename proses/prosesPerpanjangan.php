@@ -1,5 +1,5 @@
 <?php
-    include "koneksiDB.php";
+    include "../proses/koneksiDB.php";
 
     $id=$_GET['id'];
     $idPeminjaman=$_GET['idPm'];
@@ -11,9 +11,9 @@
 
     if ($result) {
         echo "<script>alert('Status berhasil diubah');</script>";
-        header('Location: Peminjaman.php');
+        header('Location: ../halaman/Peminjaman.php');
     }else{
         echo "<script>alert('Status gagal diubah');</script>";
-        header('Location: perpanjangan.php');
+        header('Location: ../halaman/editPerpanjangan.php');
     }
 ?>
