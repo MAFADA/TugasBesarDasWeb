@@ -13,8 +13,16 @@ session_start();
     <title>Data Anggota</title>
 </head>
 <body>
-    <div id="logo">
-        <h4>Perpustakaan</h4>
+<div class="heading">
+        <div id="logo">
+            <h4>Perpustakaan</h4>
+        </div>
+        <ul>
+            <li><p>Tanggal: <span id="tanggalwaktu"></span></p></li>
+            <li class="nm">
+                <span>Akun: <?=$_SESSION['name']?></span> <i class="fa fa-angle-down"></i>
+            </li>
+        </ul>
     </div>
     <nav>
         <ul>
