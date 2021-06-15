@@ -1,13 +1,15 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <link rel="stylesheet" type="text/css" href="../DefaultCSS.css">
     <link rel="stylesheet" type="text/css" href="../styleCSS.css">
     <script src="https:/kit.fontawesome.com/a076d05399.js"></script>
     <link rel="preconnect" href="https://fonts.gstatic.com">
-    <link href="https://fonts.googleapis.com/css2?family=Do+Hyeon&family=Montserrat&display=swap" rel="stylesheet"> 
+    <link href="https://fonts.googleapis.com/css2?family=Do+Hyeon&family=Montserrat&display=swap" rel="stylesheet">
     <title>Register Page</title>
 </head>
+
 <body>
     <div class="heading">
         <div id="logo">
@@ -15,15 +17,15 @@
         </div>
         <ul>
             <li class="nm"></li>
-            <li><p>Tanggal: <span id="tanggalwaktu"></span></p></li>
+            <li>
+                <p>Tanggal: <span id="tanggalwaktu"></span></p>
+            </li>
         </ul>
     </div>
-    <script src="script.js"></script>
-
     <div class="container">
         <form action="../proses/RegisterProses.php" method="GET">
             <br>
-                <h1>REGISTER</h1>
+            <h1>REGISTER</h1>
             <br>
             <input type="text" class="a" name="ni" id="ni" placeholder="Nomor Induk"><br>
             <input type="text" class="a" name="nama" id="nama" placeholder="Nama Lengkap"><br>
@@ -39,7 +41,9 @@
             <br>
             <input class="register" type="submit" value="Register">
         </form>
-        
+
     </div>
+    <script src="../script.js"></script>
 </body>
+
 </html>
