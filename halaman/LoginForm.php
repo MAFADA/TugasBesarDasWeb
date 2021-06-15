@@ -5,27 +5,29 @@ include "../proses/koneksiDB.php";
 
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-        <link rel="stylesheet" type="text/css" href="../DefaultCSS.css">
-        <link rel="stylesheet" type="text/css" href="../styleCSS.css">
-        <script type="text/JavaScript" src="../jquery-3.6.0.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="../DefaultCSS.css">
+    <link rel="stylesheet" type="text/css" href="../styleCSS.css">
+    <script type="text/JavaScript" src="../jquery-3.6.0.min.js"></script>
     <script src="https:/kit.fontawesome.com/a076d05399.js"></script>
     <link rel="preconnect" href="https://fonts.gstatic.com">
-    <link href="https://fonts.googleapis.com/css2?family=Do+Hyeon&family=Montserrat&display=swap" rel="stylesheet"> 
+    <link href="https://fonts.googleapis.com/css2?family=Do+Hyeon&family=Montserrat&display=swap" rel="stylesheet">
     <title>Login Page</title>
 </head>
+
 <body>
-<div class="heading">
+    <div class="heading">
         <div>
             <h4>Perpustakaan</h4>
         </div>
         <ul>
             <li class="nm"></li>
-            <li><p>Tanggal: <span id="tanggalwaktu"></span></p></li>
+            <li>
+                <p>Tanggal: <span id="tanggalwaktu"></span></p>
+            </li>
         </ul>
     </div>
-    <script src="script.js"></script>
-
     <div class="container">
         <br>
         <h1>LOGIN</h1>
@@ -45,5 +47,7 @@ include "../proses/koneksiDB.php";
         </form>
         <a href="../halaman/RegisterForm.php"><input class="register" type="button" value="Register"></a>
     </div>
+    <script src="../script.js"></script>
 </body>
+
 </html>
