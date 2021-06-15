@@ -50,7 +50,7 @@ session_start();
                 </tr>
                 <?php                                      
                     // query tampil data buku
-                    $query=mysqli_query($connect,"SELECT dp.idDetail,u.nama,dp.tglPinjam,dp.tglKembali,b.judul,dp.jml,dp.status
+                    $query=mysqli_query($connect,"SELECT dp.idDetail,u.nama,pm.tglPinjam,pm.tglKembali,b.judul,dp.jml,dp.status
                     FROM detail_pinjam dp
                     LEFT OUTER JOIN peminjaman pm ON pm.idPeminjaman=dp.idPeminjaman
                     LEFT OUTER JOIN user u ON pm.id_user=u.id_user
