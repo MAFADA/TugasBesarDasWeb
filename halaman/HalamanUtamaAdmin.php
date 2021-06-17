@@ -29,24 +29,48 @@ include "../proses/koneksiDB.php";
     <nav>
         <ul>
             <div class="menu"></div>
-            <li><a href="#"><i class="fas fa-home"></i><span>Dashboard</span></a></li>
+            <li><a href="../halaman/HalamanUtamaAdmin.php"><i class="fas fa-home"></i><span>Dashboard</span></a></li>
             <li><a href="../halaman/DataAnggota.php"><i class="fas fa-user"></i><span>Data Anggota</span></a></li>
             <li><a href="../halaman/DataBuku.php"><i class="fas fa-book"></i><span>Data Buku</span></a></li>
             <li><a href="../halaman/TransaksiAdmin.php"><i class="fas fa-pen"></i><span>Transaksi</span></a></li>
         </ul>
     </nav>
-    <div class="off">
-        <p>
-            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nihil cum non dolores fugit doloremque quisquam, sed dignissimos perferendis explicabo eum vero soluta eos? Aliquam, veniam? Ipsa pariatur distinctio quia unde.
-            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nihil cum non dolores fugit doloremque quisquam, sed dignissimos perferendis explicabo eum vero soluta eos? Aliquam, veniam? Ipsa pariatur distinctio quia unde.
-            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nihil cum non dolores fugit doloremque quisquam, sed dignissimos perferendis explicabo eum vero soluta eos? Aliquam, veniam? Ipsa pariatur distinctio quia unde.
-            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nihil cum non dolores fugit doloremque quisquam, sed dignissimos perferendis explicabo eum vero soluta eos? Aliquam, veniam? Ipsa pariatur distinctio quia unde.
-            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nihil cum non dolores fugit doloremque quisquam, sed dignissimos perferendis explicabo eum vero soluta eos? Aliquam, veniam? Ipsa pariatur distinctio quia unde.
-            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nihil cum non dolores fugit doloremque quisquam, sed dignissimos perferendis explicabo eum vero soluta eos? Aliquam, veniam? Ipsa pariatur distinctio quia unde.
-            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nihil cum non dolores fugit doloremque quisquam, sed dignissimos perferendis explicabo eum vero soluta eos? Aliquam, veniam? Ipsa pariatur distinctio quia unde.
-            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nihil cum non dolores fugit doloremque quisquam, sed dignissimos perferendis explicabo eum vero soluta eos? Aliquam, veniam? Ipsa pariatur distinctio quia unde.
-            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nihil cum non dolores fugit doloremque quisquam, sed dignissimos perferendis explicabo eum vero soluta eos? Aliquam, veniam? Ipsa pariatur distinctio quia unde.
-        </p>
+    <div class="off">    
+        <div class='data_pinjam'>
+            <?php 
+                $sql = $connect->query("SELECT COUNT(*) AS jmlPinjam FROM detail_pinjam");
+                $pinjam = $sql->fetch_assoc();
+            ?>
+
+            <h5 class="title">Data Peminjaman</h5>
+            <p class="text">Data buku yang dipinjam</p>
+            <h4><?= $pinjam['jmlPinjam']; ?></h4>
+            <a href="TransaksiAdmin.php" class="link">Lihat Data Peminjaman</a>
+        </div>                
+<br>
+        <div class='data_buku'>
+            <?php 
+                $sql = $connect->query("SELECT COUNT(*) AS jmlBuku FROM buku");
+                $pinjam = $sql->fetch_assoc();
+            ?>
+
+            <h5 class="title">Data Buku</h5>
+            <p class="text">Jumlah buku saat ini</p>
+            <h4><?= $pinjam['jmlBuku']; ?></h4>
+            <a href="DataBuku.php" class="link">Lihat Data Buku</a>
+        </div>
+<br>
+        <div class='data_anggota'>
+            <?php 
+                $sql = $connect->query("SELECT COUNT(*) AS jmlAnggota FROM user WHERE id_level='2'");
+                $pinjam = $sql->fetch_assoc();
+            ?>
+
+            <h5 class="title">Data Anggota</h5>
+            <p class="text">Jumlah anggota saat ini</p>
+            <h4><?= $pinjam['jmlAnggota']; ?></h4>
+            <a href="DataAnggota.php" class="link">Lihat Data Anggota</a>
+        </div>                             
     </div>
     <script src="../script.js"></script>
 </body>

@@ -29,7 +29,7 @@ include "../proses/koneksiDB.php";
     <nav>
         <ul>
             <div class="menu"></div>
-            <li><a href="#"><i class="fas fa-home"></i><span>Dashboard</span></a></li>
+            <li><a href="../halaman/HalamanUtamaAdmin.php"><i class="fas fa-home"></i><span>Dashboard</span></a></li>
             <li><a href="../halaman/DataAnggota.php"><i class="fas fa-user"></i><span>Data Anggota</span></a></li>
             <li><a href="../halaman/DataBuku.php"><i class="fas fa-book"></i><span>Data Buku</span></a></li>
             <li><a href="../halaman/TransaksiAdmin.php"><i class="fas fa-pen"></i><span>Transaksi</span></a></li>
