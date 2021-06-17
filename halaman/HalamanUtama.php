@@ -29,75 +29,36 @@ include "../proses/koneksiDB.php";
     <nav>
         <ul>
             <div class="menu"></div>
-            <li><a href="#"><i class="fas fa-home"></i><span>Dashboard</span></a></li>
-            <li><a href="../halaman/ProfilPerpus.html"><i class="fas fa-user"></i><span>Profil Perpustakaan</span></a></li>
+            <li><a href="../halaman/HalamanUtama.php"><i class="fas fa-home"></i><span>Dashboard</span></a></li>
+            <li><a href="../halaman/ProfilPerpus.php"><i class="fas fa-user"></i><span>Profil Perpustakaan</span></a></li>
             <li><a href="../halaman/KatalogBuku.php"><i class="fas fa-book"></i><span>Katalog Buku</span></a></li>
             <li><a href="../halaman/Peminjaman.php"><i class="fas fa-pen"></i><span>Peminjaman</span></a></li>
         </ul>
     </nav>
     <div class="off">
-        <p>
-            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nihil cum non dolores fugit doloremque quisquam, sed dignissimos perferendis explicabo eum vero soluta eos? Aliquam, veniam? Ipsa pariatur distinctio quia unde.
-            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nihil cum non dolores fugit doloremque quisquam, sed dignissimos perferendis explicabo eum vero soluta eos? Aliquam, veniam? Ipsa pariatur distinctio quia unde.
-            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nihil cum non dolores fugit doloremque quisquam, sed dignissimos perferendis explicabo eum vero soluta eos? Aliquam, veniam? Ipsa pariatur distinctio quia unde.
-            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nihil cum non dolores fugit doloremque quisquam, sed dignissimos perferendis explicabo eum vero soluta eos? Aliquam, veniam? Ipsa pariatur distinctio quia unde.
-            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nihil cum non dolores fugit doloremque quisquam, sed dignissimos perferendis explicabo eum vero soluta eos? Aliquam, veniam? Ipsa pariatur distinctio quia unde.
-            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nihil cum non dolores fugit doloremque quisquam, sed dignissimos perferendis explicabo eum vero soluta eos? Aliquam, veniam? Ipsa pariatur distinctio quia unde.
-            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nihil cum non dolores fugit doloremque quisquam, sed dignissimos perferendis explicabo eum vero soluta eos? Aliquam, veniam? Ipsa pariatur distinctio quia unde.
-            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nihil cum non dolores fugit doloremque quisquam, sed dignissimos perferendis explicabo eum vero soluta eos? Aliquam, veniam? Ipsa pariatur distinctio quia unde.
-            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nihil cum non dolores fugit doloremque quisquam, sed dignissimos perferendis explicabo eum vero soluta eos? Aliquam, veniam? Ipsa pariatur distinctio quia unde.
-            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nihil cum non dolores fugit doloremque quisquam, sed dignissimos perferendis explicabo eum vero soluta eos? Aliquam, veniam? Ipsa pariatur distinctio quia unde.
-            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nihil cum non dolores fugit doloremque quisquam, sed dignissimos perferendis explicabo eum vero soluta eos? Aliquam, veniam? Ipsa pariatur distinctio quia unde.
-            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nihil cum non dolores fugit doloremque quisquam, sed dignissimos perferendis explicabo eum vero soluta eos? Aliquam, veniam? Ipsa pariatur distinctio quia unde.
-            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nihil cum non dolores fugit doloremque quisquam, sed dignissimos perferendis explicabo eum vero soluta eos? Aliquam, veniam? Ipsa pariatur distinctio quia unde.
-            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nihil cum non dolores fugit doloremque quisquam, sed dignissimos perferendis explicabo eum vero soluta eos? Aliquam, veniam? Ipsa pariatur distinctio quia unde.
-            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nihil cum non dolores fugit doloremque quisquam, sed dignissimos perferendis explicabo eum vero soluta eos? Aliquam, veniam? Ipsa pariatur distinctio quia unde.
-            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nihil cum non dolores fugit doloremque quisquam, sed dignissimos perferendis explicabo eum vero soluta eos? Aliquam, veniam? Ipsa pariatur distinctio quia unde.
-            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nihil cum non dolores fugit doloremque quisquam, sed dignissimos perferendis explicabo eum vero soluta eos? Aliquam, veniam? Ipsa pariatur distinctio quia unde.
-            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nihil cum non dolores fugit doloremque quisquam, sed dignissimos perferendis explicabo eum vero soluta eos? Aliquam, veniam? Ipsa pariatur distinctio quia unde.
-            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nihil cum non dolores fugit doloremque quisquam, sed dignissimos perferendis explicabo eum vero soluta eos? Aliquam, veniam? Ipsa pariatur distinctio quia unde.
-            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nihil cum non dolores fugit doloremque quisquam, sed dignissimos perferendis explicabo eum vero soluta eos? Aliquam, veniam? Ipsa pariatur distinctio quia unde.
-            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nihil cum non dolores fugit doloremque quisquam, sed dignissimos perferendis explicabo eum vero soluta eos? Aliquam, veniam? Ipsa pariatur distinctio quia unde.
-            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nihil cum non dolores fugit doloremque quisquam, sed dignissimos perferendis explicabo eum vero soluta eos? Aliquam, veniam? Ipsa pariatur distinctio quia unde.
-            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nihil cum non dolores fugit doloremque quisquam, sed dignissimos perferendis explicabo eum vero soluta eos? Aliquam, veniam? Ipsa pariatur distinctio quia unde.
-            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nihil cum non dolores fugit doloremque quisquam, sed dignissimos perferendis explicabo eum vero soluta eos? Aliquam, veniam? Ipsa pariatur distinctio quia unde.
-            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nihil cum non dolores fugit doloremque quisquam, sed dignissimos perferendis explicabo eum vero soluta eos? Aliquam, veniam? Ipsa pariatur distinctio quia unde.
-            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nihil cum non dolores fugit doloremque quisquam, sed dignissimos perferendis explicabo eum vero soluta eos? Aliquam, veniam? Ipsa pariatur distinctio quia unde.
-            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nihil cum non dolores fugit doloremque quisquam, sed dignissimos perferendis explicabo eum vero soluta eos? Aliquam, veniam? Ipsa pariatur distinctio quia unde.
-            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nihil cum non dolores fugit doloremque quisquam, sed dignissimos perferendis explicabo eum vero soluta eos? Aliquam, veniam? Ipsa pariatur distinctio quia unde.
-            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nihil cum non dolores fugit doloremque quisquam, sed dignissimos perferendis explicabo eum vero soluta eos? Aliquam, veniam? Ipsa pariatur distinctio quia unde.
-            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nihil cum non dolores fugit doloremque quisquam, sed dignissimos perferendis explicabo eum vero soluta eos? Aliquam, veniam? Ipsa pariatur distinctio quia unde.
-            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nihil cum non dolores fugit doloremque quisquam, sed dignissimos perferendis explicabo eum vero soluta eos? Aliquam, veniam? Ipsa pariatur distinctio quia unde.
-            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nihil cum non dolores fugit doloremque quisquam, sed dignissimos perferendis explicabo eum vero soluta eos? Aliquam, veniam? Ipsa pariatur distinctio quia unde.
-            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nihil cum non dolores fugit doloremque quisquam, sed dignissimos perferendis explicabo eum vero soluta eos? Aliquam, veniam? Ipsa pariatur distinctio quia unde.
-            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nihil cum non dolores fugit doloremque quisquam, sed dignissimos perferendis explicabo eum vero soluta eos? Aliquam, veniam? Ipsa pariatur distinctio quia unde.
-            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nihil cum non dolores fugit doloremque quisquam, sed dignissimos perferendis explicabo eum vero soluta eos? Aliquam, veniam? Ipsa pariatur distinctio quia unde.
-            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nihil cum non dolores fugit doloremque quisquam, sed dignissimos perferendis explicabo eum vero soluta eos? Aliquam, veniam? Ipsa pariatur distinctio quia unde.
-            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nihil cum non dolores fugit doloremque quisquam, sed dignissimos perferendis explicabo eum vero soluta eos? Aliquam, veniam? Ipsa pariatur distinctio quia unde.
-            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nihil cum non dolores fugit doloremque quisquam, sed dignissimos perferendis explicabo eum vero soluta eos? Aliquam, veniam? Ipsa pariatur distinctio quia unde.
-            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nihil cum non dolores fugit doloremque quisquam, sed dignissimos perferendis explicabo eum vero soluta eos? Aliquam, veniam? Ipsa pariatur distinctio quia unde.
-            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nihil cum non dolores fugit doloremque quisquam, sed dignissimos perferendis explicabo eum vero soluta eos? Aliquam, veniam? Ipsa pariatur distinctio quia unde.
-            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nihil cum non dolores fugit doloremque quisquam, sed dignissimos perferendis explicabo eum vero soluta eos? Aliquam, veniam? Ipsa pariatur distinctio quia unde.
-            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nihil cum non dolores fugit doloremque quisquam, sed dignissimos perferendis explicabo eum vero soluta eos? Aliquam, veniam? Ipsa pariatur distinctio quia unde.
-            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nihil cum non dolores fugit doloremque quisquam, sed dignissimos perferendis explicabo eum vero soluta eos? Aliquam, veniam? Ipsa pariatur distinctio quia unde.
-            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nihil cum non dolores fugit doloremque quisquam, sed dignissimos perferendis explicabo eum vero soluta eos? Aliquam, veniam? Ipsa pariatur distinctio quia unde.
-            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nihil cum non dolores fugit doloremque quisquam, sed dignissimos perferendis explicabo eum vero soluta eos? Aliquam, veniam? Ipsa pariatur distinctio quia unde.
-            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nihil cum non dolores fugit doloremque quisquam, sed dignissimos perferendis explicabo eum vero soluta eos? Aliquam, veniam? Ipsa pariatur distinctio quia unde.
-            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nihil cum non dolores fugit doloremque quisquam, sed dignissimos perferendis explicabo eum vero soluta eos? Aliquam, veniam? Ipsa pariatur distinctio quia unde.
-            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nihil cum non dolores fugit doloremque quisquam, sed dignissimos perferendis explicabo eum vero soluta eos? Aliquam, veniam? Ipsa pariatur distinctio quia unde.
-            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nihil cum non dolores fugit doloremque quisquam, sed dignissimos perferendis explicabo eum vero soluta eos? Aliquam, veniam? Ipsa pariatur distinctio quia unde.
-            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nihil cum non dolores fugit doloremque quisquam, sed dignissimos perferendis explicabo eum vero soluta eos? Aliquam, veniam? Ipsa pariatur distinctio quia unde.
-            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nihil cum non dolores fugit doloremque quisquam, sed dignissimos perferendis explicabo eum vero soluta eos? Aliquam, veniam? Ipsa pariatur distinctio quia unde.
-            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nihil cum non dolores fugit doloremque quisquam, sed dignissimos perferendis explicabo eum vero soluta eos? Aliquam, veniam? Ipsa pariatur distinctio quia unde.
-            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nihil cum non dolores fugit doloremque quisquam, sed dignissimos perferendis explicabo eum vero soluta eos? Aliquam, veniam? Ipsa pariatur distinctio quia unde.
-            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nihil cum non dolores fugit doloremque quisquam, sed dignissimos perferendis explicabo eum vero soluta eos? Aliquam, veniam? Ipsa pariatur distinctio quia unde.
-            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nihil cum non dolores fugit doloremque quisquam, sed dignissimos perferendis explicabo eum vero soluta eos? Aliquam, veniam? Ipsa pariatur distinctio quia unde.
-            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nihil cum non dolores fugit doloremque quisquam, sed dignissimos perferendis explicabo eum vero soluta eos? Aliquam, veniam? Ipsa pariatur distinctio quia unde.
-            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nihil cum non dolores fugit doloremque quisquam, sed dignissimos perferendis explicabo eum vero soluta eos? Aliquam, veniam? Ipsa pariatur distinctio quia unde.
-            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nihil cum non dolores fugit doloremque quisquam, sed dignissimos perferendis explicabo eum vero soluta eos? Aliquam, veniam? Ipsa pariatur distinctio quia unde.
-            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nihil cum non dolores fugit doloremque quisquam, sed dignissimos perferendis explicabo eum vero soluta eos? Aliquam, veniam? Ipsa pariatur distinctio quia unde.
-            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nihil cum non dolores fugit doloremque quisquam, sed dignissimos perferendis explicabo eum vero soluta eos? Aliquam, veniam? Ipsa pariatur distinctio quia unde.
-        </p>
+        <div class='data_pinjam'>
+                <?php 
+                    $sql = $connect->query("SELECT COUNT(*) AS jmlPinjam FROM detail_pinjam");
+                    $pinjam = $sql->fetch_assoc();
+                ?>
+
+                <h5 class="title">Data Peminjaman</h5>
+                <p class="text">Data buku yang dipinjam</p>
+                <h4><?= $pinjam['jmlPinjam']; ?></h4>
+                <a href="Peminjaman.php" class="link">Lihat Data Peminjaman</a>
+            </div>                
+            <br>
+            <div class='data_buku'>
+                <?php 
+                    $sql = $connect->query("SELECT COUNT(*) AS jmlBuku FROM buku");
+                    $pinjam = $sql->fetch_assoc();
+                ?>
+
+                <h5 class="title">Data Buku</h5>
+                <p class="text">Jumlah buku saat ini</p>
+                <h4><?= $pinjam['jmlBuku']; ?></h4>
+                <a href="KatalogBuku.php" class="link">Lihat Data Buku</a>
+        </div>
     </div>
     <script src="../script.js"></script>
 </body>

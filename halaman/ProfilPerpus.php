@@ -1,3 +1,7 @@
+<?php
+session_start();
+include "../proses/koneksiDB.php";
+?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -16,19 +20,19 @@
         <div>
             <h4>Perpustakaan</h4>
         </div>
-        <ul>
-            <li class="nm"></li>
+        <ul>            
             <li>
                 <p>Tanggal: <span id="tanggalwaktu"></span></p>
             </li>
+            <li class="nm"><span>Akun: <?= $_SESSION['name'] ?></span> <i class="fa fa-angle-down"></i></li>
         </ul>
     </div>
+    <a href="waldan"><input class="mdd" type="button" value="Log Out"></a>
     <nav>
         <ul>
             <div class="menu"></div>
-            <li><a href="#"><i class="fas fa-home"></i><span>Dashboard</span></a></li>
-            <li><a href="../halaman/ProfilPerpus.html"><i class="fas fa-user"></i><span>Profil Perpustakaan</span></a>
-            </li>
+            <li><a href="../halaman/HalamanUtama.php"><i class="fas fa-home"></i><span>Dashboard</span></a></li>
+            <li><a href="../halaman/ProfilPerpus.php"><i class="fas fa-user"></i><span>Profil Perpustakaan</span></a></li>
             <li><a href="../halaman/KatalogBuku.php"><i class="fas fa-book"></i><span>Katalog Buku</span></a></li>
             <li><a href="../halaman/Peminjaman.php"><i class="fas fa-pen"></i><span>Peminjaman</span></a></li>
         </ul>
