@@ -8,9 +8,9 @@
 
     if($result){
         echo "<script>alert('Data berhasil dihapus');</script>";
-        header('Location: DataBuku.php');
+        header('Location: ../halaman/DataBuku.php');
     }else {
         echo "<script>alert('Data gagal dihapus');</script>";
-        header('Location: DataBuku.php');
+        header('Location: ../halaman/DataBuku.php');
     }
 ?>
