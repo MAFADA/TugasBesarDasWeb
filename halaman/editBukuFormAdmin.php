@@ -1,6 +1,6 @@
 <?php
 session_start();
-include "./proses/koneksiDB.php";
+include "../proses/koneksiDB.php";
 ?>
 <!DOCTYPE html>
 <html lang="en">
