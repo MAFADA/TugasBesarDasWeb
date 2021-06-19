@@ -4,3 +4,5 @@
 
     echo"Anda berhasil logout";
 ?>
+<br>
+<a href="../halaman/LoginForm.php">Login Form</a>

@@ -1,6 +1,6 @@
 <?php
 session_start();
-include "./proses/koneksiDB.php";
+include "../proses/koneksiDB.php";
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -24,7 +24,7 @@ include "./proses/koneksiDB.php";
             <li class="nm"><span>Akun: <?= $_SESSION['name'] ?></span> <i class="fa fa-angle-down"></i></li>
         </ul>
     </div>
-    <a href="waldan"><input class="mdd" type="button" value="Log Out"></a>
+    <a href="../proses/SessionLogout.php"><input class="mdd" type="button" value="Log Out"></a>
     <nav>
         <ul>
             <div class="menu"></div>
