@@ -67,8 +67,8 @@ include "../proses/koneksiDB.php";
                             <td class="tb1"><?php echo $row['noHp'] ?></td>
                             <td class="tb1"><?php echo $row['tglTerima'] ?></td>
                             <td>
-                                <a class="edit" href="../halaman/editDataAnggota.php?id=<?php echo $row['id_user']; ?>">Edit</a>
-                                <a class="hapus" href="../proses/hapusAnggota.php?id=<?php echo $row['id_user']; ?>">Hapus</a>
+                                <div><a class="edit" href="../halaman/editDataAnggota.php?id=<?php echo $row['id_user']; ?>">Edit</a></div>
+                                <div><a class="hapus" href="../proses/hapusAnggota.php?id=<?php echo $row['id_user']; ?>">Hapus</a></div>
                             </td>
                         </tr>
                 <?php

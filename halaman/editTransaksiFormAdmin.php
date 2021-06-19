@@ -2,7 +2,8 @@
 session_start();
 include "../proses/koneksiDB.php";
 ?>
-<html>
+<!DOCTYPE html>
+<html lang="en">
 
 <head>
     <title>Edit Data Transaksi</title>
@@ -40,26 +41,22 @@ include "../proses/koneksiDB.php";
 
     ?>
     <div class="container">
+        <br>
+        <h1>EDIT DATA TRANSAKSI</h1>
+        <br>
         <table class="table2">
             <form action="../proses/prosesEditTrAdmin.php" method="get">
                 <?php
                 while ($row = mysqli_fetch_array($result)) {
                 ?>
-                    <thead>
-                        <tr>
-                            <th colspan="2">
-                                PERUBAHAN DATA TRANSAKSI
-                            </th>
-                        </tr>
-                    </thead>
                     <tbody>
                         <tr>
                             <td class="kolom1">Id</td>
-                            <td><input type="number" name='id' value="<?php echo $row['idDetail']; ?>" readonly></td>
+                            <td><input class="a" type="number" name='id' value="<?php echo $row['idDetail']; ?>" readonly></td>
                         </tr>
                         <tr>
                             <td>Status</td>
-                            <td><input type="text" name="status" value="<?php echo $row['status']; ?>"></td>
+                            <td><input class="a" type="text" name="status" value="<?php echo $row['status']; ?>"></td>
                         </tr>
                     </tbody>
                     <tfoot>

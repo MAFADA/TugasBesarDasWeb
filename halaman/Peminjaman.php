@@ -36,7 +36,7 @@ include "../proses/koneksiDB.php";
             <li><a href="../halaman/Peminjaman.php"><i class="fas fa-pen"></i><span>Peminjaman</span></a></li>
         </ul>
     </nav>
-    <div class="container">
+    <div class="container-table">
         <br>
         <h1>LIST DATA PEMINJAMAN</h1>
         <br>

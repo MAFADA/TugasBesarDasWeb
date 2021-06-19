@@ -17,12 +17,12 @@
 
     if(mysqli_query($connect,$sql)) {
         echo "Register berhasil";?>
-        <a href="LoginForm.php">Login Page</a>
+        <a href="../halaman/LoginForm.php">Login Page</a>
     <?php    
     }else{
         echo "Data gagal ditambahkan <br>".mysqli_error($connect);
     }?>
-        <a href="RegisterForm.html">Register Form</a>
+        <a href="../halaman/RegisterForm.html">Register Form</a>
     <?php
     mysqli_close($connect);
     ?>

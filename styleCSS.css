@@ -32,7 +32,7 @@ body{
 .heading ul{
     display: flex;
     right: 0;
-    width: 350px;
+    width: 400px;
     padding-right: 60px;
     justify-content: space-between;
 }
@@ -165,23 +165,6 @@ div.on{
 .b{
     color: whitesmoke;
 }
-.login, .register{
-    height: 40px;
-    border: none;
-    display: block;
-    width: 100%;
-    font-size: 17px;
-    border-radius: 3px;
-    text-decoration: none;
-    font-weight: bold;
-    color: white;
-}
-.login {
-    background-color: rgb(0, 191, 255);
-}
-.register {
-    background-color: #00d600;
-}
 label{
     color: rgb(95, 95, 95);
 }
@@ -233,12 +216,41 @@ label{
     text-align: left;
     vertical-align: middle;
 }
-.edit, .hapus{
-    margin: 3px;
-    display: block;
-    height: 15px;
-    width: 60px;
+a{
+    text-decoration: none;
+}
+label{
+    color: white;
+}
+.tb1{
     text-align: center;
+}
+/* Tombol */
+.login, .register{
+    height: 40px;
+    border: none;
+    display: block;
+    width: 100%;
+    font-size: 17px;
+    border-radius: 3px;
+    text-decoration: none;
+    font-weight: bold;
+    color: white;
+}
+.login {
+    background-color: rgb(0, 191, 255);
+}
+.register {
+    background-color: #00d600;
+}
+.edit, .hapus, .tm{
+    border-spacing: 30x;
+    margin: 10px;
+    height: 20px;
+    width: 60px;
+    display: table-cell;
+    text-align: center;
+    vertical-align: middle;
     border-radius: 3px;
     color: whitesmoke;
     text-decoration: none;
@@ -249,11 +261,10 @@ label{
 .hapus{
     background-color: red;
 }
-a{
-    text-decoration: none;
-}
-.tb1{
-    text-align: center;
+.tm{
+    height: 30px;
+    width: 130px;
+    background-color: #00a400;
 }
 /* __HALAMAN PROFILE__ */
 /* BANNER */
@@ -290,8 +301,13 @@ section{
 }
 /* ABOUT */
 .about{
-    margin: 40px 40px 40px 90px;
+    margin: 90px 40px 0px 90px;
     background-color: whitesmoke;
+    border-radius: 5px;
+}
+.about h1{
+    color: black;
+    
 }
 section h2{
     font-weight: bold;
@@ -308,6 +324,7 @@ section h2{
 }
 /* CONTACT */
 .contact{
+    margin-top: 90px;
     color: white;
     margin-left: 50px;
     background-color: rgb(37, 61, 61);
@@ -332,4 +349,21 @@ section h2{
     margin-left: 50px;
     padding: 5px 5px;
     background-color: black;
+}
+/* INFORMASI */
+.informasi{
+    justify-content: space-between;
+    display: flex;
+}
+.detail{
+    width: 100%;
+    height: auto;
+    background-color: #00d600;
+    margin: 0px 40px 0px 90px;
+    text-align: center;
+    padding: 15px;
+    border-radius: 5px;
+}
+.link{
+    color: black;
 }
