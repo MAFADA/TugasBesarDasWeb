@@ -56,7 +56,7 @@ include "../proses/koneksiDB.php";
             $sql = $connect->query("SELECT COUNT(*) AS jmlPinjam FROM detail_pinjam");
             $pinjam = $sql->fetch_assoc();
             ?>
-            <a href="TransaksiAdmin.php" class="link">
+            <a href="../halaman/Peminjaman.php" class="link">
                 <table style="width: 100%;">
                     <tr>
                         <td style="text-align: left;"><?= $pinjam['jmlPinjam']; ?></td>
@@ -74,14 +74,14 @@ include "../proses/koneksiDB.php";
             $sql = $connect->query("SELECT COUNT(*) AS jmlBuku FROM buku");
             $pinjam = $sql->fetch_assoc();
             ?>
-            <a href="DataBuku.php" class="link">
+            <a href="../halaman/KatalogBuku.php" class="link">
                 <table style="width: 100%;">
                     <tr>
                         <td style="text-align: left;"><?= $pinjam['jmlBuku']; ?></td>
                         <td style="text-align: right;"><i class="fas fa-book"></i></td>
                     </tr>
                     <tr>
-                        <td colspan="2">Data Buku</td>
+                        <td colspan="2">Katalog Buku</td>
                     </tr>
                 </table>
             </a>
