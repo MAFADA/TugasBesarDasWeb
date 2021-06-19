@@ -2,7 +2,8 @@
 session_start();
 include "../proses/koneksiDB.php";
 ?>
-<html>
+<!DOCTYPE html>
+<html lang="en">
 
 <head>
     <title>Perpanjangan</title>
@@ -19,7 +20,9 @@ include "../proses/koneksiDB.php";
             <h4>Perpustakaan</h4>
         </div>
         <ul>
-            <li><p>Tanggal: <span id="tanggalwaktu"></span></p></li>
+            <li>
+                <p>Tanggal: <span id="tanggalwaktu"></span></p>
+            </li>
             <li class="nm"><span>Akun: <?= $_SESSION['name'] ?></span> <i class="fa fa-angle-down"></i></li>
         </ul>
     </div>
@@ -42,36 +45,32 @@ include "../proses/koneksiDB.php";
 
     ?>
     <div class="container">
+        <br>
+        <h1>PERPANJANGAN PEMINJAMAN</h1>
+        <br>
         <table class="table2">
             <form action="../proses/prosesPerpanjangan.php" method="get">
                 <?php
                 while ($row = mysqli_fetch_array($result)) {
                 ?>
-                    <thead>
-                        <tr>
-                            <th colspan="2">
-                                PERPANJANGAN PEMINJAMAN
-                            </th>
-                        </tr>
-                    </thead>
                     <tbody>
                         <tr>
                             <td class="kolom1">Id Detail</td>
-                            <td><input type="number" name='id' value="<?php echo $row['idDetail']; ?>" readonly></td>
+                            <td><input class="a" type="number" name='id' value="<?php echo $row['idDetail']; ?>" readonly></td>
                         </tr>
                         <tr>
                             <td class="kolom1">Id Peminjaman</td>
-                            <td><input type="number" name='idPm' value="<?php echo $row['idPeminjaman']; ?>" readonly></td>
+                            <td><input class="a" type="number" name='idPm' value="<?php echo $row['idPeminjaman']; ?>" readonly></td>
                         </tr>
                         <tr>
                             <td>Tanggal Kembali</td>
-                            <td><input type="date" name="kembali" value="<?php echo $row['tglKembali']; ?>"></td>
+                            <td><input class="a" type="date" name="kembali" value="<?php echo $row['tglKembali']; ?>"></td>
                         </tr>
                     </tbody>
                     <tfoot>
                         <tr>
                             <th colspan="2">
-                                <input class="edit" type="submit" name="edit" value='Edit'>
+                                <input class="register" type="submit" name="edit" value='Edit'>
                             </th>
                         </tr>
                     </tfoot>

@@ -34,20 +34,24 @@ include "../proses/koneksiDB.php";
             <li><a href="../halaman/DataBuku.php"><i class="fas fa-book"></i><span>Data Buku</span></a></li>
             <li><a href="../halaman/TransaksiAdmin.php"><i class="fas fa-pen"></i><span>Transaksi</span></a></li>
     </nav>
-    <div class="container">
+    <div class="container-table">
         <br>
-        <div class="list-table">
-            <table class="table1">
+        <h1>LIST DATA TRANSAKSI</h1>
+        <br>
+        <table class="table1">
+            <thead>
                 <tr>
-                    <th>No</th>
-                    <th>Nama</th>
-                    <th>Tanggal Pinjam</th>
-                    <th>Tanggal Kembali</th>
-                    <th>Judul</th>
-                    <th>Jumlah</th>
-                    <th>Status</th>
+                    <th class="tb1">No</th>
+                    <th class="tb1">Nama</th>
+                    <th class="tb1">Tanggal Pinjam</th>
+                    <th class="tb1">Tanggal Kembali</th>
+                    <th class="tb1">Judul</th>
+                    <th class="tb1">Jumlah</th>
+                    <th class="tb1">Status</th>
                     <th></th>
                 </tr>
+            </thead>
+            <tbody>
                 <?php
                 // query tampil data buku
                 $query = mysqli_query($connect, "SELECT dp.idDetail,u.nama,pm.tglPinjam,pm.tglKembali,b.judul,dp.jml,dp.status
@@ -59,24 +63,24 @@ include "../proses/koneksiDB.php";
                     while ($row = mysqli_fetch_array($query)) {
                 ?>
                         <tr class="tb">
-                            <td><?php echo $row['idDetail'] ?></td>
-                            <td><?php echo $row['nama'] ?></td>
-                            <td><?php echo $row['tglPinjam'] ?></td>
-                            <td><?php echo $row['tglKembali'] ?></td>
-                            <td><?php echo $row['judul'] ?></td>
-                            <td><?php echo $row['jml'] ?></td>
-                            <td><?php echo $row['status'] ?></td>
+                            <td class="tb1"><?php echo $row['idDetail'] ?></td>
+                            <td class="tb1"><?php echo $row['nama'] ?></td>
+                            <td class="tb1"><?php echo $row['tglPinjam'] ?></td>
+                            <td class="tb1"><?php echo $row['tglKembali'] ?></td>
+                            <td class="tb1"><?php echo $row['judul'] ?></td>
+                            <td class="tb1"><?php echo $row['jml'] ?></td>
+                            <td class="tb1"><?php echo $row['status'] ?></td>
                             <td>
-                                <a class="edit" href="../halaman/editTransaksiFormAdmin.php?id=<?php echo $row['idDetail']; ?>">Edit</a>
-                                <a class="hapus" href="../proses/hapusTransaksi.php?id=<?php echo $row['idDetail']; ?>">Hapus</a>
+                                <div><a class="edit" href="../halaman/editTransaksiFormAdmin.php?id=<?php echo $row['idDetail']; ?>">Edit</a></div>
+                                <div><a class="hapus" href="../proses/hapusTransaksi.php?id=<?php echo $row['idDetail']; ?>">Hapus</a></div>
                             </td>
                         </tr>
                 <?php
                     }
                 }
                 ?>
-            </table>
-        </div>
+            </tbody>
+        </table>
     </div>
     <script src="../script.js"></script>
 </body>

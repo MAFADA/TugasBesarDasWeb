@@ -65,17 +65,18 @@ include "../proses/koneksiDB.php";
                             <td class="tb1"><?php echo $row['penerbit'] ?></td>
                             <td class="tb1"><?php echo $row['tahun_terbit'] ?></td>
                             <td>
-                                <a class="edit" href="../halaman/editBukuFormAdmin.php?id=<?php echo $row['idBuku']; ?>">Edit</a>
-                                <a class="hapus" href="../proses/hapusBuku.php?id=<?php echo $row['idBuku']; ?>">Hapus</a>
+                                <div><a class="edit" href="../halaman/editBukuFormAdmin.php?id=<?php echo $row['idBuku']; ?>">Edit</a></div>
+                                <div><a class="hapus" href="../proses/hapusBuku.php?id=<?php echo $row['idBuku']; ?>">Hapus</a></div>
                             </td>
                         </tr>
-                <?php
+                        <?php
                     }
                 }
                 ?>
             </tbody>
         </table>
-        <a href="../halaman/addBuku.php">Tambah Buku</a>
+        <br>
+        <a class="tm" href="../halaman/addBuku.php">Tambah Buku</a>
     </div>
     <script src="../script.js"></script>
 </body>

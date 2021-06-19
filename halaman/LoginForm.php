@@ -35,7 +35,7 @@ include "../proses/koneksiDB.php";
         <form action="../proses/SessionLoginMultiProses.php" method="POST">
             <input type="text" class="a" name="ni" id="ni" placeholder="Nomor Induk/Username"><br>
             <input type="password" class="a" name="password" id="password" placeholder="Password"><br>
-            <label for="Level">Level</label>
+            <label for="Level">Level:</label>
             <select class="a" name="level" class='form-control' id='level'>
                 <option value="">-- Masuk Sebagai --</option>
                 <option value="2">Operator</option>
@@ -45,7 +45,7 @@ include "../proses/koneksiDB.php";
             <button type="submit" class="register" name="register" id="register" value="register">  <a href="RegisterForm.html">Register</a>  -->
             <input class="login" type="submit" value="Login"><br>
         </form>
-        <a href="../halaman/RegisterForm.php"><input class="register" type="button" value="Register"></a>
+        <a href="../halaman/RegisterForm.html"><input class="register" type="button" value="Register"></a>
     </div>
     <script src="../script.js"></script>
 </body>
